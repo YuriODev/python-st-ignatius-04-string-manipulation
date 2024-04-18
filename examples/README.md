@@ -7,21 +7,21 @@ Here are some examples to get you started.
 
 | Topic Covered                                           | Code with explanations                            |
 | ------------------------------------------------------- | ------------------------------------------------- |
-| Repeat Last Two Characters                              | [Detailed code](./example_1.py)   |
-| Reverse Digits                                          | [Detailed code](./example_2.py)   |
-| Check Start of String                                   | [Detailed code](./example_3.py)   |
-| Number reversal                                         | [Detailed code](./example_4.py)   |
-| Palindrome String                                       | [Detailed code](./example_5.py)   |
-| Is Digit Check                                          | [Detailed code](./example_6.py)   |
-| Digits and Characters                                   | [Detailed code](./example_7.py)   |
-| The first word in a string                              | [Detailed code](./example_8.py)   |
-| Access Code Calculation                                 | [Detailed code](./example_9.py)   |
-| ASCII Characters                                        | [Detailed code](./example_10.py)  |
-| Count Words in a String                                 | [Detailed code](./example_11.py)    |
-| String Len                                              | [Detailed code](./example_12.py)    |
+| Repeat Last Two Characters                              | [Detailed code](./example_1.py)                   |
+| Reverse Digits                                          | [Detailed code](./example_2.py)                   |
+| Check Start of String                                   | [Detailed code](./example_3.py)                   |
+| Number reversal                                         | [Detailed code](./example_4.py)                   |
+| Palindrome String                                       | [Detailed code](./example_5.py)                   |
+| Is Digit Check                                          | [Detailed code](./example_6.py)                   |
+| Digits and Characters                                   | [Detailed code](./example_7.py)                   |
+| The first word in a string                              | [Detailed code](./example_8.py)                   |
+| Access Code Calculation                                 | [Detailed code](./example_9.py)                   |
+| ASCII Characters                                        | [Detailed code](./example_10.py)                  |
+| Count Words in a String                                 | [Detailed code](./example_11.py)                  |
+| String Len                                              | [Detailed code](./example_12.py)                  |
+| Digits and Characters Count                             | [Detailed code](./example_13.py)                  |
+| Vowel and Consonant Check                               | [Detailed code](./example_14.py)                  |
 
-| Sum of Integers Calculation                  | [Detailed code](./example_13.py)    |
-| Pattern Printing                             | [Detailed code](./example_14.py)    |
 | Factorial Calculation                        | [Detailed code](./example_15.py)    |
 | Sum of Sequence Elements Calculation         | [Detailed code](./example_16.py)    |
 | Sum of Digits Calculation                    | [Detailed code](./example_17.py)    |
@@ -365,14 +365,6 @@ else:
 ```
 </details>
 
-Напишіть програму для розрахунку довжини рядка без використання функції len().
-
-Вхідні дані:
-
-pythonguide.pp.ua
-Вихідні дані:
-
-17
 
 ## Problem 12: String Len
 
@@ -401,70 +393,63 @@ print(length)
 ```
 </details>
 
-Напишіть програму, яка отримує рядок і обчислює кількість цифр і букв у ньому.
 
-Вхідні дані:
+## Problem 13: Digits and Characters Count
 
-Andromeda, M 31, NGC 224
-Вихідні дані:
-
-Letters 13
-Digits 5
-
-## Problem 13: Sum of Integers Calculation
-
-**Problem:** Given `n` integers. Each number is entered on a separate line. Calculate the sum of the numbers.
+**Problem:** Write a program that receives a string and calculates the number of digits and letters in it.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 10<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9 | 45 |
-| 2   | 3<br>1<br>2<br>3 | 6 |
-| 3   | 1<br>1 | 1 |
+| 1   | Andromeda, M 31, NGC 224 | Letters 13<br>Digits 5 |
+| 2   | Python 3.9 | Letters 6<br>Digits 2 |
+| 3   | 12345 | Letters 0<br>Digits 5 |
+| 4   | 1a2b3c4d5e | Letters 5<br>Digits 5 |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number of integers: "))
-total = 0
+input_string = input("Enter a string: ")
 
-for _ in range(n):
-    total += int(input("Enter the number: "))
+letter_count = 0
+digit_count = 0
 
-print(total)
+for char in input_string:
+    if char.isalpha():
+        letter_count += 1
+    elif char.isdigit():
+        digit_count += 1
+
+print(f"Letters {letter_count}")
+print(f"Digits {digit_count}")
 ```
 </details>
 
-Напишіть програму для перевірки чи є введена літера голосною або приголосною.
 
-Вхідні дані:
+## Problem 14: Vowel and Consonant Check
 
-F
-e
-Вихідні дані:
-
-F is a consonant
-e is a vowel
-
-## Problem 14: Pattern Printing
-
-**Problem:** Write a program to build a pattern as in the output data for the entered value `n`.
+**Problem:** Write a program to check if the entered letter is a vowel or a consonant.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 7      | 1  2  3  4  5  6  7<br>2  3  4  5  6  7<br>3  4  5  6  7<br>4  5  6  7<br>5  6  7<br>6  7<br>7 |
-| 2   | 5      | 1  2  3  4  5<br>2  3  4  5<br>3  4  5<br>4  5<br>5 |
-| 3   | 3      | 1  2  3<br>2  3<br>3 |
+| 1   | F      | F is a consonant |
+| 2   | e      | e is a vowel |
+| 3   | a      | a is a vowel |
+| 4   | b      | b is a consonant |
+| 5   | c      | c is a consonant |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
-for i in range(1, n + 1):
-    for j in range(i, n + 1):
-        print(j, end=" ")
-    print()
+letter = input("Enter a letter: ")
+
+if letter.lower() in "aeiou":
+    print(f"{letter} is a vowel")
+else:
+    print(f"{letter} is a consonant")
 ```
 </details>
 
@@ -479,27 +464,37 @@ for i in range(1, n + 1):
 1*2=2
 1*2+2*3+3*4=20
 
-## Problem 15: Factorial Calculation
+## Problem 15: 
 
-**Problem:** Given a positive integer `n`, calculate the value of `n!` - the factorial of this number.
+**Problem:** User defines a number `n` such as `n >= 2`. Calculate the sum of the following sequence: `1 x 2 + 2 x 3 + ... + (n - 1) x n`. Print the result in the format shown in the output data.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 3      | 6       |
-| 2   | 4      | 24      |
-| 3   | 1      | 1       |
+| 1   | 2      | 1*2=2   |
+| 2   | 4      | 1*2+2*3+3*4=20 |
+| 3   | 5      | 1*2+2*3+3*4+4*5=35 |
+| 4   | 6      | 1*2+2*3+3*4+4*5+5*6=56 |
+| 5   | 7      | 1*2+2*3+3*4+4*5+5*6+6*7=84 |
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
 n = int(input("Enter the number: "))
-factorial = 1
 
-for i in range(1, n + 1):
-    factorial *= i
+total = 0
+output = ""
 
-print(factorial)
+if n >= 2:
+    for i in range(1, n):
+        total += i * (i + 1)
+        output += f"{i}*{i + 1}+"
+
+    output = output[:-1]
+    output += f"={total}"
+    print(output)
+else:
+    print("Invalid input")
 ```
 </details>
 
