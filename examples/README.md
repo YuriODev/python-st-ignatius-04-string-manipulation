@@ -5,18 +5,19 @@ Here are some examples to get you started.
 <details open>
 <summary><b>Covered topics</b></summary>
 
-| Topic Covered                                           | Code with explanations                           |
+| Topic Covered                                           | Code with explanations                            |
 | ------------------------------------------------------- | ------------------------------------------------- |
-| Repeat Last Two Characters                              | [Detailed code](./example_1.py)      |
-| Reverse Digits                                          | [Detailed code](./example_2.py)      |
-|  Average Grade Calculation                              | [Detailed code](./example_3.py)      |
-|  Number of # Characters Printing              | [Detailed code](./example_4.py)      |
-|  Triangle of Numbers Printing                 | [Detailed code](./example_5.py)      |
-|  Positive, Negative, and Zero Numbers Counting | [Detailed code](./example_6.py)      |
-|  Two-Digit Odd Numbers Printing                | [Detailed code](./example_7.py)      |
-|  Number of Digits Counting                     | [Detailed code](./example_8.py)      |
-|  Printing Numbers with Conditions             | [Detailed code](./example_9.py)      |
-| Multiplication Table Printing                | [Detailed code](./example_10.py)    |
+| Repeat Last Two Characters                              | [Detailed code](./example_1.py)   |
+| Reverse Digits                                          | [Detailed code](./example_2.py)   |
+| Check Start of String                                   | [Detailed code](./example_3.py)   |
+| Number reversal                                         | [Detailed code](./example_4.py)   |
+| Palindrome String                                       | [Detailed code](./example_5.py)   |
+| Is Digit Check                                          | [Detailed code](./example_6.py)   |
+| Digits and Characters                                   | [Detailed code](./example_7.py)   |
+| The first word in a string                              | [Detailed code](./example_8.py)   |
+| Access Code Calculation                                 | [Detailed code](./example_9.py)   |
+| Multiplication Table Printing                           | [Detailed code](./example_10.py)  |
+
 | Sum of Products Calculation                  | [Detailed code](./example_11.py)    |
 | Number Entry and Exit                        | [Detailed code](./example_12.py)    |
 | Sum of Integers Calculation                  | [Detailed code](./example_13.py)    |
@@ -48,6 +49,9 @@ Here are some examples to get you started.
 | --- | ------ | --------------- |
 | 1   | emu    | mumumumumu      |
 | 2   | lion   | ononononon      |
+| 3   | tiger  | ererererer      |
+| 4  | snake  | kekekekeke      |
+
 
  - Repeat Last Two Characters
 
@@ -59,11 +63,8 @@ Here are some examples to get you started.
 ```python
 input_string = input("Enter a string: ")
 
-# Ensure the input string has at least 2 characters
 if len(input_string) >= 2:
-    # Extract the last two characters
     last_two = input_string[-2:]
-    # Print the last two characters repeated 5 times
     print(last_two * 5)
 ```
 </details>
@@ -77,6 +78,8 @@ if len(input_string) >= 2:
 | 1   | 98       | 89        |
 | 2   | 10010010 | 01001001  |
 | 3   | 1235     | 5321      |
+| 4   | 1        | 1         |
+| 5   | 0        | 0         |
 
 **Problem:** Compute the number obtained by reversing the digits of a given natural number.
 
@@ -86,10 +89,8 @@ if len(input_string) >= 2:
 ```python
 input_number = input("Enter a natural number: ")
 
-# Convert the number to a string to reverse it
 reversed_number = input_number[::-1]
 
-# Print the reversed number
 print(reversed_number)
 ```
 </details>
@@ -101,6 +102,10 @@ print(reversed_number)
 | No. | Inputs                      | Outputs |
 | --- | --------------------------- | ------- |
 | 1   | wireless router<br> route     | False   |
+| 2   | python programming<br> py     | True    |
+| 3   | 12345<br> 123                 | True    |
+| 4   | 12345<br> 234                 | False   |
+| 5   | 12345<br> 12345               | True    |
 
 **Problem:** Verify whether a user-input string begins with the specified characters.
 
@@ -108,242 +113,202 @@ print(reversed_number)
 <summary><b>Python Solution</b></summary>
 
 ```python
-# Take input for the string and the prefix to check
 input_string = input("Enter the string: ")
 prefix = input("Enter the prefix: ")
 
-# Check if the string starts with the given prefix
 starts_with_prefix = input_string.startswith(prefix)
 
-# Print the result
 print(starts_with_prefix)
 
 ```
 </details>
 
-Дано натуральне число. Знайти число, що отримується з вхідного перестановкою його першої та останньої цифр. Врахувати випадок введення одноцифрового числа.
-
-Вхідні дані:
-
-1467
-5
-11
-12
-Вихідні дані:
-
-7461
-5
-11
-21
-
-## Example 4: Number of # Characters Printing
-
-**Problem:** Write a program to print integers from `n` to `0` with the number of `#` characters equal to the value of the number.
-
-| No. | Inputs | Outputs                               |
-| --- | ------ | ------------------------------------- |
-| 1   | 6      | 6 ######<br>5 #####<br>4 ####<br>3 ###<br>2 ##<br>1 # |
-| 2   | 3      | 3 ###<br>2 ##<br>1 # |
-| 3   | 1      | 1 # |
-
-<details open>
-<summary><b>Python Solution</b></summary>
-
-```python
-
-n = int(input("Enter the number: "))
-
-for i in range(n, -1, -1):
-    print(i, "#" * i)
-```
-</details>
 
 
-Користувач вводить рядок, в якому можуть бути пристуні пропуски. Визначити, чи є рядок паліндромом, тобто таким, який однаково читається як справа наліво, так і зліва направо. Для літер регістр не враховувати. Приклади рядків-паліндромів: racecar, 10201, Ada, Never odd or even.
+## Example 4:  Number reversal
 
-Вхідні дані:
-
-Ada
-Able was I ere I saw Elba
-10501
-Origin
-Вихідні дані:
-
-True
-True
-True
-False
-
-## Example 5: Triangle of Numbers Printing
-
-**Problem:** Given an integer `n` (1 ≤ `n` ≤ 9). Print a triangle of numbers from `1` to `n` as shown in the example.
-
-| No. | Inputs | Outputs             |
-| --- | ------ | ------------------- |
-| 1   | 9      | 1<br>22<br>333<br>4444<br>55555<br>666666<br>7777777<br>88888888<br>999999999 |
-| 2   | 5      | 1<br>22<br>333<br>4444<br>55555 |
-| 3   | 1      | 1 |
-
-<details open>
-<summary><b>Python Solution</b></summary>
-
-```python
-n = int(input("Enter the number: "))
-for i in range(1, n + 1):
-    print(str(i) * i)
-```
-</details>
-
-Для введеного єдиного символу, перевірте, чи є він цифрою. Під час розв’язування задачі не можна використовувати функції для роботи з рядками. Програма повинна вивести слово Yes, якщо символ є цифрою, або слово No.
-
-Вхідні дані:
-
-7
-A
-h
-Вихідні дані:
-
-Yes
-No
-No
-
-## Example 6: Positive, Negative, and Zero Numbers Counting
-
-**Problem:** Write a program that counts the positive and negative numbers, as well as zeros entered by the user, and outputs their quantity in one line with one space between them.
-
-| No. | Inputs | Outputs                      |
-| --- | ------ | ---------------------------- |
-| 1   | 5<br>12<br>-45<br>0<br>14<br>0 | 2 1 2 |
-| 2   | 1<br>2<br>3<br>4<br>5<br>6 | 6 0 0 |
-| 3   | -1<br>-2<br>-3<br>-4<br>-5<br>-6 | 0 6 0 |
-
-<details open>
-<summary><b>Python Solution</b></summary>
-
-```python
-positive = 0
-negative = 0
-zeros = 0
-
-n = int(input("Enter the number of integers: "))
-
-for _ in range(n):
-    number = int(input("Enter the number: "))
-    if number > 0:
-        positive += 1
-    elif number < 0:
-        negative += 1
-    else:
-        zeros += 1
-
-print(positive, negative, zeros)
-```
-</details>
-
-Користувач вводить рядок, у якому чергуються цифри та інші символи. На початку і у кінці рядка цифри відсутні. Напишіть програму, яка друкує усі символи введеного рядка у тому ж порядку, але без цифр.
-
-Вхідні дані:
-
-H1e2l3l4o5w6o7r8l9d
-i1m3p4o9r0t4 6t7h8i9s
-Вихідні дані:
-
-Helloworld
-import this
-
-## Example 7: Two-Digit Odd Numbers Printing
-
-**Problem:** Print all two-digit odd numbers whose last digit is `n` - an integer entered by the user.
+**Problem:** Given a natural number `n`. Find a number obtained by permuting its first and last digits. Consider the case of entering a single-digit number.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 5      | 15 25 35 45 55 65 75 85 95 |
-| 2   | 1      | 11 21 31 41 51 61 71 81 91 |
-| 3   | 0      | 10 20 30 40 50 60 70 80 90 |
+| 1   | 1467   | 7461    |
+| 2   | 5      | 5       |
+| 3   | 11     | 11      |
+| 4   | 12     | 21      |
+| 5  | 1      | 1       |
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
+n = input("Enter the number: ")
 
-for i in range(10, 100):
-    if i % 2 != 0 and i % 10 == n:
-        print(i, end=" ")
+if len(n) > 1:
+    reversed_number = n[-1] + n[1:-1] + n[0]
+else:
+    reversed_number = n
+
+print(reversed_number)
 ```
 </details>
 
-Напишіть програму, яка виводить перше слово у рядку. Слово - це послідовність непробільних символів, обмежена пропусками або межами рядка. Вхідний рядок містить довільну послідовність символів. Програма повинна вивести перше слово цього рядка.
 
-Вхідні дані:
 
-Stranger Things
-Вихідні дані:
+## Example 5: Palindrome String
 
-Stranger
-
-## Example 8: Number of Digits Counting
-
-**Problem:** Given a natural number `n`. Determine the number of digits in it.
+**Problem:** A user enters a string which can contain digits and other characters. Determine if the line is a palindrome, i.e., it reads the same from left to right and from right to left. Do not consider the case of letters. Examples of palindrome strings: racecar, 10201, Ada, Never odd or even.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 12367832 | 8       |
-| 2   | 142      | 3       |
-| 3   | 0        | 1       |
+| 1   | Ada    | True    |
+| 2   | Able was I ere I saw Elba | True    |
+| 3   | 10501  | True    |
+| 4   | Origin | False   |
+| 5   | 12321  | True    |
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
+input_string = input("Enter a string: ")
 
-n = int(input("Enter the number: "))
+input_string = input_string.replace(" ", "").lower()
 
-count = 0
+is_palindrome = input_string == input_string[::-1]
 
-while n > 0:
-    n //= 10 # Decrease the number by one digit
-    count += 1 # Increase the count by one
-
-print(count)
+print(is_palindrome)
 ```
 </details>
 
-Для доступу до власного акаунту на сайті соціальної мережі користувач ввів логін і пароль. Так як була увімкнена двофакторна авторизація, на його телефон прийшло повідомлення з рядком цифр та інформацією як отримати код доступу. У повідомленні йшлося: «Кожну цифру, яка більша 5, необхідно націло розділити на 2, а потім з утвореної послідовності цифр видалити усі парні числа». Який код повинен ввести користувач для успішної авторизації? Напишіть програму, на вхід якої вводиться рядок цифр із повідомлення, а програма повинна надрукувати правильний код доступу.
 
-Вхідні дані:
+## Example 6: Is Digit Check
 
-5763
-1977
-Вихідні дані:
 
-33
-33
-
-## Example 9: Printing Numbers with Conditions
-
-**Problem:** Write a program that prints integers from `1` to `n` (1 < `n` ≤ 1000) with the following condition: for numbers divisible by 3, it prints `*3*` instead of the number, for numbers divisible by 5, it prints `*5*`, and for numbers divisible by 3 and 5 simultaneously, the message will be `*35*`.
+**Problem:**  For the entered symbol, check if it is a digit. You cannot use string functions to solve the problem. The program should print the word Yes if the character is a digit, or the word No.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 15     | 1<br>2<br>\*3\*<br>4<br>\*5\*<br>\*3\*<br>7<br>8<br>\*3\*<br>\*5\*<br>11<br>\*3\*<br>13<br>14<br>\*35\* |
-| 2   | 20     | 1<br>2<br>\*3\*<br>4<br>\*5\*<br>\*3\*<br>7<br>8<br>\*3\*<br>\*5\*<br>11<br>\*3\*<br>13<br>14<br>\*35\*<br>16<br>17<br>\*3\*<br>19<br>\*5\* |
-| 3   | 10     | 1<br>2<br>\*3\*<br>4<br>\*5\*<br>\*3\*<br>7<br>8<br>\*3\*<br>\*5\* |
+| 1   | 7      | Yes     |
+| 2   | A      | No      |
+| 3   | 0      | Yes     |
+| 4   | 9      | Yes     |
+| 5   | h      | No      |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
-for i in range(1, n + 1):
-    if i % 3 == 0 and i % 5 == 0:
-        print("*35*")
-    elif i % 3 == 0:
-        print("*3*")
-    elif i % 5 == 0:
-        print("*5*")
-    else:
-        print(i)
+# Solution 1
+
+symbol = input("Enter a symbol: ")
+
+
+if "0" <= symbol <= "9":
+    print("Yes")
+else:
+    print("No")
+
+# Solution 2
+
+digits = "0123456789"
+
+if symbol in digits:
+    print("Yes")
+else:
+    print("No")
+```
+</details>
+
+
+
+## Example 7: Digits and Characters
+
+**Problem:** A user enters a string in which digits and other characters alternate. The string does not contain digits at the beginning and end. Write a program that prints all the characters of the entered string in the same order, but without digits.
+
+| No. | Inputs | Outputs |
+| --- | ------ | ------- |
+| 1   | H1e2l3l4o5w6o7r8l9d | Helloworld |
+| 2   | i1m3p4o9r0t4 6t7h8i9s | import this |
+| 3   | 1H2e3l4l5o6 7W8o9r0l1d | Hello World |
+| 4   | 1a2b3c4d5e6f7g8h9i0j | abcdefghij |
+
+
+<details open>
+<summary><b>Python Solution</b></summary>
+
+```python
+input_string = input("Enter a string: ")
+
+result = ""
+
+for char in input_string:
+    if not char.isdigit():
+        result += char
+
+print(result)
+```
+</details>
+
+## Example 8: The first word in a string
+
+**Problem:** Write a program that outputs the first word in a string. A word is a sequence of non-space characters bounded by spaces or the ends of a string. The input string contains an arbitrary sequence of characters. The program should print the first word of this string. Need to consider the case when the string has just one word
+
+| No. | Inputs | Outputs |
+| --- | ------ | ------- |
+| 1   | Stranger Things | Stranger |
+| 2   | The Mandalorian | The |
+| 3   | The Witcher | The |
+
+<details open>
+<summary><b>Python Solution</b></summary>
+
+```python
+input_string = input("Enter a string: ")
+
+first_space_index = input_string.find(" ")
+
+if first_space_index != -1:
+    first_word = input_string[:first_space_index]
+else:
+    first_word = input_string
+
+print(first_word)
+
+```
+</details>
+
+
+## Example 9: Access Code Calculation
+
+**Problem:** To access their account on a social network site, a user entered their login and password. Since two-factor authentication was enabled, they received a message with a string of numbers and information on how to get the access code. The message read: "Each digit greater than 5 must be divided by 2 and then all even numbers must be removed from the resulting sequence of digits." What code should the user enter for successful authorization? Write a program that takes a string of numbers from the message as input and prints the correct access code.
+
+| No. | Inputs | Outputs |
+| --- | ------ | ------- |
+| 1   | 5763   | 33      |
+| 2   | 1977   | 33      |
+| 3   | 12345  | 1       |
+| 4   | 987654 | 33      |
+| 5   | 123456 | 1       |
+
+
+<details open>
+<summary><b>Python Solution</b></summary>
+
+```python
+input_string = input("Enter a string: ")
+
+result = ""
+
+for char in input_string:
+    if char.isdigit() and int(char) > 5:
+        result += str(int(char) // 2)
+    elif char.isdigit() and int(char) % 2 != 0:
+        result += char
+
+print(result)
+
+
 ```
 </details>
 
