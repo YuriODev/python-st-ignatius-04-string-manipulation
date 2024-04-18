@@ -338,38 +338,36 @@ for i in range(start, end + 1):
 ```
 </details>
 
-Дано рядок, що складається з слів, розділених пропусками. Визначте кількість слів у рядку.
 
-Вхідні дані:
-
-Events happened very rapidly with Francis Morgan that late spring morning
-Вихідні дані:
-
-11
-
-## Problem 11: Sum of Products Calculation
+## Problem 11: Count Words in a String
 
 
-**Problem:** For a given integer `n` (n > 1), calculate the value `1 × 2 + 2 × 3 + …​ + (n - 1) × n`.
+**Problem:** Given a string of words separated by spaces. Determine the number of words in the string.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 6      | 70      |
-| 2   | 5      | 40      |
-| 3   | 3      | 8       |
+| 1   | Events happened very rapidly with Francis Morgan that late spring morning | 11 |
+| 2   | The quick brown fox jumps over the lazy dog | 9 |
+| 3   | The cat in the hat | 5 |
+| 4   | The quick brown fox jumps over the lazy dog | 9 |
+| 5   | The cat in the hat | 5 |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
     
 ```python
-n = int(input("Enter the number: "))
-total = 0
+input_string = input("Enter a string: ")
 
-for i in range(1, n):
-    total += i * (i + 1)
+if len(input_string) == 0:
+    print(0)
+else:
+    word_count = 1
+    for char in input_string:
+        if char == " ":
+            word_count += 1
 
-print(total)
-
+    print(word_count)
 ```
 </details>
 
