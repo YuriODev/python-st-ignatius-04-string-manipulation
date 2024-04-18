@@ -312,39 +312,29 @@ print(result)
 ```
 </details>
 
-Виведіть усі символи ASCII з кодами від n (n > 32) до m (m < 127) і їх коди в наступному вигляді: «символ код».
 
-Вхідні дані:
+## Example 10:  ASCII Characters
 
-101
-106
-Вихідні дані:
-
-e 101
-f 102
-g 103
-h 104
-i 105
-j 106
-
-## Example 10:  Multiplication Table Printing
-
-**Problem:** Write a program to create a multiplication table (from 1 to 10) for the entered integer `n`.
+**Problem:** Print all ASCII characters with codes from `n` (n > 32) to `m` (m < 127) and their codes in the following format: "character code".
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 3      | 3 x 1 = 3<br>3 x 2 = 6<br>3 x 3 = 9<br>3 x 4 = 12<br>3 x 5 = 15<br>3 x 6 = 18<br>3 x 7 = 21<br>3 x 8 = 24<br>3 x 9 = 27<br>3 x 10 = 30 |
-| 2   | 5      | 5 x 1 = 5<br>5 x 2 = 10<br>5 x 3 = 15<br>5 x 4 = 20<br>5 x 5 = 25<br>5 x 6 = 30<br>5 x 7 = 35<br>5 x 8 = 40<br>5 x 9 = 45<br>5 x 10 = 50 |
-| 3   | 7      | 7 x 1 = 7<br>7 x 2 = 14<br>7 x 3 = 21<br>7 x 4 = 28<br>7 x 5 = 35<br>7 x 6 = 42<br>7 x 7 = 49<br>7 x 8 = 56<br>7 x 9 = 63<br>7 x 10 = 70 |
+| 1   | 101<br>106 | e 101<br>f 102<br>g 103<br>h 104<br>i 105<br>j 106 |
+| 2   | 65<br>70   | A 65<br>B 66<br>C 67<br>D 68<br>E 69<br>F 70 |
+| 3   | 33<br>40   | ! 33<br>" 34<br># 35<br>$ 36<br>% 37<br>& 38<br>' 39 |
+| 4   | 120<br>126 | x 120<br>y 121<br>z 122<br{ 123<br| 124<br} 125<br~ 126 |
+| 5  | 35<br>50   | # 35<br>$ 36<br>% 37<br>& 38<br>' 39<br( 40<br) 41<br>* 42<br+ 43<br, 44<br- 45<br. 46<br/ 47<br0 48<br1 49 |
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
+start = int(input("Enter the first number: "))
+end = int(input("Enter the second number: "))
 
-for i in range(1, 11):
-    print(f"{n} x {i} = {n * i}")
+for i in range(start, end + 1):
+    print(chr(i), i)
+
 ```
 </details>
 
