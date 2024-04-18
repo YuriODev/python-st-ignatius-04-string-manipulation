@@ -16,10 +16,10 @@ Here are some examples to get you started.
 | Digits and Characters                                   | [Detailed code](./example_7.py)   |
 | The first word in a string                              | [Detailed code](./example_8.py)   |
 | Access Code Calculation                                 | [Detailed code](./example_9.py)   |
-| Multiplication Table Printing                           | [Detailed code](./example_10.py)  |
+| ASCII Characters                                        | [Detailed code](./example_10.py)  |
+| Count Words in a String                                 | [Detailed code](./example_11.py)    |
+| String Len                                              | [Detailed code](./example_12.py)    |
 
-| Sum of Products Calculation                  | [Detailed code](./example_11.py)    |
-| Number Entry and Exit                        | [Detailed code](./example_12.py)    |
 | Sum of Integers Calculation                  | [Detailed code](./example_13.py)    |
 | Pattern Printing                             | [Detailed code](./example_14.py)    |
 | Factorial Calculation                        | [Detailed code](./example_15.py)    |
@@ -119,7 +119,6 @@ prefix = input("Enter the prefix: ")
 starts_with_prefix = input_string.startswith(prefix)
 
 print(starts_with_prefix)
-
 ```
 </details>
 
@@ -274,7 +273,6 @@ else:
     first_word = input_string
 
 print(first_word)
-
 ```
 </details>
 
@@ -307,8 +305,6 @@ for char in input_string:
         result += char
 
 print(result)
-
-
 ```
 </details>
 
@@ -322,8 +318,7 @@ print(result)
 | 1   | 101<br>106 | e 101<br>f 102<br>g 103<br>h 104<br>i 105<br>j 106 |
 | 2   | 65<br>70   | A 65<br>B 66<br>C 67<br>D 68<br>E 69<br>F 70 |
 | 3   | 33<br>40   | ! 33<br>" 34<br># 35<br>$ 36<br>% 37<br>& 38<br>' 39 |
-| 4   | 120<br>126 | x 120<br>y 121<br>z 122<br{ 123<br| 124<br} 125<br~ 126 |
-| 5  | 35<br>50   | # 35<br>$ 36<br>% 37<br>& 38<br>' 39<br( 40<br) 41<br>* 42<br+ 43<br, 44<br- 45<br. 46<br/ 47<br0 48<br1 49 |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
@@ -334,7 +329,6 @@ end = int(input("Enter the second number: "))
 
 for i in range(start, end + 1):
     print(chr(i), i)
-
 ```
 </details>
 
@@ -380,27 +374,30 @@ pythonguide.pp.ua
 
 17
 
-## Problem 12: Number Entry and Exit
+## Problem 12: String Len
 
-**Problem:** Write a program where the user enters integers. If an integer `n` is entered, the program should end its execution with the message `Done`. First, the user enters the number `n`, and then the rest of the numbers. 
+**Problem:** Write a program to calculate the length of a string without using the `len()` function. 
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 5<br>67<br>112<br>14<br>5 | Done |
-| 2   | 3<br>1<br>2<br>3 | Done |
-| 3   | 1<br>1 | Done |
+| 1   | pythonguide.pp.ua | 17 |
+| 2   | python | 6 |
+| 3   | guide | 5 |
+| 4   | pp.ua | 5 |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
+input_string = input("Enter a string: ")
 
-while True:
-    number = int(input("Enter the number: "))
-    if number == n:
-        print("Done")
-        break
+length = 0
+
+for _ in input_string:
+    length += 1
+
+print(length)
 ```
 </details>
 
