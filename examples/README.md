@@ -21,11 +21,11 @@ Here are some examples to get you started.
 | String Len                                              | [Detailed code](./example_12.py)                  |
 | Digits and Characters Count                             | [Detailed code](./example_13.py)                  |
 | Vowel and Consonant Check                               | [Detailed code](./example_14.py)                  |
+| Sum of Sequence Elements Calculation                    | [Detailed code](./example_15.py)                  |
+| Uppercase, Lowercase, and Space Count                   | [Detailed code](./example_16.py)                  |
+| Remove Duplicate Characters                             | [Detailed code](./example_17.py)                  |
+| Find and Replace Substring                              | [Detailed code](./example_18.py)                  |
 
-| Factorial Calculation                        | [Detailed code](./example_15.py)    |
-| Sum of Sequence Elements Calculation         | [Detailed code](./example_16.py)    |
-| Sum of Digits Calculation                    | [Detailed code](./example_17.py)    |
-| Power Calculation                            | [Detailed code](./example_18.py)    |
 | Power Calculation                            | [Detailed code](./example_19.py)    |
 | Quiz Winner Determination                    | [Detailed code](./example_20.py)    |
 | Average Speed Calculation                    | [Detailed code](./example_21.py)    |
@@ -464,7 +464,7 @@ else:
 1*2=2
 1*2+2*3+3*4=20
 
-## Problem 15: 
+## Problem 15: Sum of Sequence Elements Calculation
 
 **Problem:** User defines a number `n` such as `n >= 2`. Calculate the sum of the following sequence: `1 x 2 + 2 x 3 + ... + (n - 1) x n`. Print the result in the format shown in the output data.
 
@@ -500,124 +500,121 @@ else:
 
 **Note** We assign the value `1` to the variable `factorial` because the factorial of `0` is `1`. Then, we use a `for` loop to iterate through the numbers from `1` to `n` and multiply them to the `factorial` variable. Also, we can't assign it to `0` because the multiplication of any number by `0` is `0`.
 
-Напишіть програму, яка зчитує рядок, введений користувачем, та визначає у ньому: кількість великих літер, кількість малих літер, кількість символів пропуску.
 
-Вхідні дані:
 
-By Red Flower Bagheera meant fire, only no creature in the jungle will call fire by its proper name.
-Вихідні дані:
+## Problem 16: Uppercase, Lowercase, and Space Count
 
-Upper 4
-Lower 76
-Spaces 18
-
-## Problem 16: Sum of Sequence Elements Calculation
-
-**Problem:** Determine the sum of all elements of the sequence that ends with the number `0`. A sequence of integers that ends with the number `0` is entered (the number `0` itself is not included in the sequence, but is used as a sign of its end).
+**Problem:** Write a program that reads a string entered by the user and determines the number of uppercase letters, lowercase letters, and spaces in it.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 2<br>5<br>3<br>0 | 10 |
-| 2   | 1<br>2<br>3<br>4<br>5<br>0 | 15 |
-| 3   | 0 | 0 |
+| 1   | By Red Flower Bagheera meant fire, only no creature in the jungle will call fire by its proper name. | Upper 4<br>Lower 76<br>Spaces 18 |
+| 2   | The quick brown fox jumps over the lazy dog | Upper 3<br>Lower 32<br>Spaces 8 |
+| 3   | The cat in the hat | Upper 1<br>Lower 12<br>Spaces 4 |
+| 4   | The quick brown fox jumps over the lazy dog | Upper 3<br>Lower 32<br>Spaces 8 |
+| 5   | The cat in the hat | Upper 1<br>Lower 12<br>Spaces 4 |
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-total = 0
+input_string = input("Enter a string: ")
 
-while True:
-    number = int(input("Enter the number: "))
-    if number == 0:
-        break
-    total += number
+upper_count = 0
+lower_count = 0
+space_count = 0
 
-print(total)
+for char in input_string:
+    if char.isupper():
+        upper_count += 1
+    elif char.islower():
+        lower_count += 1
+    elif char.isspace():
+        space_count += 1
+
+print(f"Upper {upper_count}")
 ```
 </details>
 
-Вводиться рядок. Потрібно видалити з нього повторювані символи і всі пропуски.
 
-Вхідні дані:
+## Problem 17: Remove Duplicate Characters
 
-aa
-a a b b c dd e
-Вихідні дані:
-
-a
-abcde
-
-## Problem 17: Largest Element Calculation
-
-**Problem:** Given a sequence of natural numbers, ending with the number `0`. Determine the value of the largest element in the sequence.
+**Problem:** Enter a string. Remove all duplicate characters and spaces from it.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 5<br>3<br>8<br>0 | 8 |
-| 2   | 1<br>2<br>3<br>4<br>5<br>0 | 5 |
-| 3   | 17<br>12<br>3<br>0 | 17 |
+| 1   | aa     | a       |
+| 2   | a a b b c dd e | abcde |
+| 3   | 12345  | 12345  |
+| 4   | 123 123  | 123   |
+| 5   | 1 2 3 4 5  | 12345 |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-max_number = 0
+input_string = input("Enter a string: ")
 
-while True:
-    number = int(input("Enter the number: "))
-    if number == 0:
-        break
-    if number > max_number:
-        max_number = number
+unique_chars = ""
 
-print(max_number)
+for char in input_string:
+    if char not in unique_chars and not char.isspace():
+        unique_chars += char
+
+print(unique_chars)
+
+
 ```
 </details>
 
-Знайти у рядку зазначений підрядок і замінити його на новий. Рядок, підрядок для заміни та новий рядок вводить користувач. Розгляньте випадок заміни усіх підрядків. Також необхідно врахувати випадок відсутності підрядка, який необхідно замінити (вивести is impossible).
 
-Вхідні дані:
+## Problem 18: Find and Replace Substring
 
-12 45 32 567 32 109
-32
-0
-12 45 32 567 32 109
-33
--1
-Вихідні дані:
-
-12 45 0 567 0 109
-is impossible
-
-## Problem 18: Sum of Digits Calculation
-
-**Problem:** Write a program that outputs all three-digit numbers whose sum of digits is equal to a certain value `n` entered by the user.
+**Problem:** Given a string, find a specified substring and replace it with a new one. The user enters the string, the substring to replace, and the new string. Consider the case of replacing all substrings. Also, consider the case when the substring to be replaced is not present (print is impossible).
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 4      | 112 121 130 202 211 220 301 310 400 |
-| 2   | 5      | 104 113 122 131 140 203 212 221 230 302 311 320 401 410 500 |
-| 3   | 6      | 105 114 123 132 141 150 204 213 222 231 240 303 312 321 330 402 411 420 501 510 600 |
+| 1   | 12 45 32 567 32 109<br>32<br>0 | 12 45 0 567 0 109 |
+| 2   | 12 45 32 567 32 109<br>33<br>-1 | is impossible |
+| 3   | abc abc abc abc<br>abc<br>xyz | xyz xyz xyz xyz |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
+input_string = input("Enter a string: ")
 
-digits_total = 0
+substring = input("Enter the substring to replace: ")
 
-for i in range(100, 1000):
-    current_number = i
-    digits_total = 0
-    
-    while current_number > 0:
-        digits_total += current_number % 10
-        current_number //= 10
+new_substring = input("Enter the new substring: ")
 
-    if digits_total == n:
-        print(i, end=" ")
+# Solution 1
+
+if substring in input_string:
+    # Without using replace 
+    result = ""
+    i = 0
+    while i < len(input_string) - len(substring) + 1:
+        if input_string[i:i + len(substring)] == substring:
+            result += new_substring
+            i += len(substring)
+        else:
+            result += input_string[i]
+            i += 1
+
+    print(result)
+else:
+    print("is impossible")
+
+# Solution 2
+
+if substring in input_string:
+    result = input_string.replace(substring, new_substring)
+    print(result)
+else:
+    print("is impossible")
 ```
 
 </details>
