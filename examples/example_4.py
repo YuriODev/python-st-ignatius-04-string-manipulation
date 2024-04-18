@@ -7,3 +7,6 @@ if len(n) > 1:
 else:
     # If the number has only one digit, the reversed number is the same
     reversed_number = n
+
+# Print the reversed number
+print(reversed_number)
