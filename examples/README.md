@@ -692,45 +692,45 @@ print("Yes" if can_construct else "No")
 ```
 </details>
 
-Дано послідовність символів довжини n (n ≥ 1). Перевірити баланс круглих дужок в цьому виразі (кожна відкита дужка має свою закриту дужку). Наприклад, при введенні виразу (()) () програма повинна повідомити про правильність розстановки дужок (True), а при введенні виразу ((()) - про неправильність (False). Напишіть програму, яка може перевіряти баланс дужок в арифметичних виразах, тексті і т. д.
+## Example 21: Check Bracket Balance
 
-Вхідні дані:
+**Problem:** Given a sequence of characters of length n (n ≥ 1), verify the balance of parentheses in the expression (each opening parenthesis must have its corresponding closing parenthesis). For example, the input `(()) ()` should result in `True`, indicating correct placement, while the input `((())` should result in `False`, indicating incorrect placement. The program should be capable of checking the balance of parentheses in arithmetic expressions, text, etc.
 
-(3y + 21)(12 - (x + 5))
-(61x + 15(y + 2)
-Вихідні дані:
+| No. | Inputs                              | Outputs       |
+| --- | ----------------------------------- | ------------- |
+| 1   | (3y + 21)(12 - (x + 5))             | True          |
+| 2   | (61x + 15(y + 2)                    | False         |
 
-True
-False
-
-## Problem 21: Average Speed Calculation
-
-**Problem:** A surveillance camera automatically registers the speed of passing cars, rounding the speed values to integers. It is necessary to determine the average registered speed of all cars. If the speed of at least one car was more than 60 km/h, print Yes, otherwise print No. The program receives the number of registered cars `n` (1 ≤ `n` ≤ 30) as input, then the speeds of the cars are indicated. The speed value cannot be less than 1 and more than 300. The program should first print the average speed with an accuracy of one decimal place, then Yes or No.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 3<br>50<br>45<br>65 | 53.3<br>Yes |
-| 2   | 2<br>100<br>200 | 150.0<br>Yes |
-| 3   | 1<br>30 | 30.0<br>No |
+**Problem:** Write a program to check the balance of parentheses in various expressions.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number of cars: "))
+# Take input for the expression
+expression = input("Enter the expression: ")
 
-total_speed = 0
-over_speed = False
+# Initialize counter for open parentheses
+balance = 0
+is_balanced = True
 
-for _ in range(n):
-    speed = int(input("Enter the speed: "))
-    total_speed += speed
-    if speed > 60:
-        over_speed = True
+# Iterate through each character in the expression
+for char in expression:
+    if char == '(':
+        balance += 1
+    elif char == ')':
+        balance -= 1
+    # If at any point there are more closing parentheses, it's unbalanced
+    if balance < 0:
+        is_balanced = False
+        break
 
-average_speed = total_speed / n
-print(f"{average_speed:.1f}")
-print("Yes" if over_speed else "No")
+# If there are open parentheses left unmatched, it's unbalanced
+if balance != 0:
+    is_balanced = False
+
+# Output result
+print("True" if is_balanced else "False")
 ```
 
 </details>
