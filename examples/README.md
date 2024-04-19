@@ -25,19 +25,18 @@ Here are some examples to get you started.
 | Uppercase, Lowercase, and Space Count                   | [Detailed code](./example_16.py)                  |
 | Remove Duplicate Characters                             | [Detailed code](./example_17.py)                  |
 | Find and Replace Substring                              | [Detailed code](./example_18.py)                  |
-
-| Power Calculation                            | [Detailed code](./example_19.py)    |
-| Quiz Winner Determination                    | [Detailed code](./example_20.py)    |
-| Average Speed Calculation                    | [Detailed code](./example_21.py)    |
-| Automorphic Number Determination             | [Detailed code](./example_22.py)    |
-| Least Common Multiple Calculation            | [Detailed code](./example_23.py)    |
-| Monotonous Sequence Printing                 | [Detailed code](./example_24.py)    |
-| Fibonacci Number Determination               | [Detailed code](./example_25.py)    |
-| Sequence Element Comparison                  | [Detailed code](./example_26.py)    |
-| Sequence Element Comparison                  | [Detailed code](./example_27.py)    |
-| Fibonacci Number Determination               | [Detailed code](./example_28.py)    |
-| Sequence Element Comparison                  | [Detailed code](./example_29.py)    |
-| Sequence Element Comparison                  | [Detailed code](./example_30.py)    |
+| Longest Sequence of Zeros                               | [Detailed code](./example_19.py)                  |
+| Can Construct                                           | [Detailed code](./example_20.py)                  |
+| Check Bracket Balance                                   | [Detailed code](./example_21.py)                  |
+| Evaluate Expression                                     | [Detailed code](./example_22.py)                  |
+| Count String Occurrences                                | [Detailed code](./example_23py)                   |
+| Format Number with Commas                               | [Detailed code](./example_24.py)                  |
+| Find and Replace Substring                              | [Detailed code](./example_25.py)                  |
+| Find Shortest Word and Its Length                       | [Detailed code](./example_26.py)                  | 
+| Run-Length Encoding                                     | [Detailed code](./example_27.py)                  |
+| Evaluate Simple Arithmetic Expression                   | [Detailed code](./example_28.py)                  |
+| Find Most Frequent Letters                              | [Detailed code](./example_29.py)                  |
+| Validate IP Address                                     | [Detailed code](./example_30.py)                  |
 
 </details>
 
@@ -359,7 +358,7 @@ if len(input_string) == 0:
     print(0)
 else:
     word_count = 1
-    for char in input_string:
+    for char in input_string.strip():
         if char == " ":
             word_count += 1
 
@@ -929,327 +928,248 @@ print(decrypted_text)
 
 ## Example 26: Find Shortest Word and Its Length
 
-**Problem:** In the given string, find the shortest word, and display this word along with its length in characters. Words may be separated by spaces, multiple spaces, punctuation marks, digits, etc. If there are multiple shortest words, only display the first one. The string of words is guaranteed to end with a period.
+**Problem:** In the given string, find the shortest word, and display this word along with its length in characters. Words may be separated by spaces, multiple spaces, punctuation marks, digits, etc. If there are multiple shortest words, only display the first one. The string of words is guaranteed to end with a period. Write a program that finds and prints the shortest word in the input text along with its length using only string operations.
+
 
 | No. | Inputs                         | Outputs  |
 | --- | ------------------------------ | -------- |
 | 1   | He lives in house number 4.    | He 2     |
 | 2   | Now is better than never.      | is 2     |
 | 3   | Tom Tells the Truth.           | Tom 3    |
+| 4   | The quick brown fox jumps over the lazy dog. | The 3 |
+| 5   | I am a programmer.             | I 1      |
 
-**Problem:** Write a program that finds and prints the shortest word in the input text along with its length using only string operations.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-# Input a sentence from the user
 sentence = input("Enter a sentence ending with a period: ")
 
-# Remove the trailing period for ease of processing
 sentence = sentence[:-1]
 
-# Initialize variables to find the shortest word and its length
 shortest_word = ''
 min_length = len(sentence)
 current_word = ''
 
-# Traverse each character in the sentence
 for char in sentence:
-    # Build a word while iterating through alphabetical characters
+
     if char.isalpha():
         current_word += char
     else:
-        # Check if a word was built and is shorter than the known shortest word
+
         if current_word and (len(current_word) < min_length):
             shortest_word = current_word
             min_length = len(current_word)
-        # Reset current word after saving
+
         current_word = ''
 
-# Final check for the last word in case the sentence ends directly after it
 if current_word and (len(current_word) < min_length):
     shortest_word = current_word
     min_length = len(current_word)
 
-# Output the shortest word and its length
 print(f'{shortest_word} {min_length}')
-
-
-## Example 26: Sequence Element Comparison
-
-**Problem:** Given a sequence of natural numbers that ends with the number `0`. Determine how many elements of this sequence are greater than the previous element.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 4<br>3<br>6<br>8<br>0 | 2 |
-| 2   | 1<br>2<br>3<br>4<br>0 | 3 |
-| 3   | 1<br>1<br>1<br>1<br>0 | 0 |
-
-<details open>
-<summary><b>Python Solution</b></summary>
-
-```python
-count = 0
-previous = int(input("Enter the number: "))
-
-while True:
-    number = int(input("Enter the number: "))
-    if number == 0:
-        break
-    if number > previous:
-        count += 1
-    previous = number
-
-print(count)
 ```
-
 </details>
+
 
 ## Example 27: Run-Length Encoding
 
-**Problem:** Implement a simple version of the run-length encoding (RLE) data compression algorithm. The algorithm receives a string containing English alphabet characters. This string is split into groups of consecutive identical characters ("runs"). Each run is characterized by the character and the number of repetitions. This information is then encoded: the length of the run of repeated characters is written first, followed by the character itself. If a run consists of only one character, the count is omitted.
+**Problem:** Implement a simple version of the run-length encoding (RLE) data compression algorithm. The algorithm receives a string containing English alphabet characters. This string is split into groups of consecutive identical characters ("runs"). Each run is characterized by the character and the number of repetitions. This information is then encoded: the length of the run of repeated characters is written first, followed by the character itself. If a run consists of only one character, the count is omitted. Write a program that outputs a run-length encoding of the input text.
 
 | No. | Inputs                  | Outputs        |
 | --- | ----------------------- | -------------- |
 | 1   | aaabccccCCaB            | 3ab4c2CaB      |
 | 2   | aabcccddffffffffff      | 2ab3c2d10f     |
+| 3   | xyz                     | xyz            |
+| 4   | pppppppppppppppp        | 16p            |
+| 5   | AaAaAaAa                | 1A1a1A1a1A1a   |
 
-**Problem:** Write a program that outputs a run-length encoding of the input text.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-# Input string
 input_string = input("Enter a string: ")
 
-# Variable to store the encoded result
 encoded_string = ""
 
-# Initialize count and previous character
 count = 1
 previous_char = input_string[0]
 
-# Iterate over the string starting from the second character
 for char in input_string[1:]:
     if char == previous_char:
         count += 1
     else:
-        # Append the count and character to the result string if count is more than 1
         if count > 1:
             encoded_string += str(count)
         encoded_string += previous_char
-        # Reset the count and update previous character
         previous_char = char
         count = 1
 
-# Handle the last run
 if count > 1:
     encoded_string += str(count)
 encoded_string += previous_char
 
-# Print the encoded string
 print(encoded_string)
 
 ```
-
 </details>
 
 ## Example 28: Evaluate Simple Arithmetic Expression
 
-**Problem:** Given a string containing one or more integers between 0 and 1,000,000,000, separated by '+' or '-' signs, calculate the value of this expression.
+**Problem:** Given a string containing one or more integers between 0 and 1,000,000,000, separated by '+' or '-' signs, calculate the value of this expression. Write a program that calculates and outputs the result of evaluating these arithmetic expressions.
 
 | No. | Inputs       | Outputs |
 | --- | ------------ | ------- |
+| No. | Expression    | Result  |
+| --- | ------------- | ------- |
 | 1   | 12-5+3       | 10      |
 | 2   | 26-14+2-1    | 13      |
 | 3   | 7-0+3        | 10      |
-
-**Problem:** Write a program that calculates and outputs the result of evaluating these arithmetic expressions.
-
-<details open>
-<summary><b>Python Solution</b></summary>
-
-```python
-# Function to evaluate the given arithmetic expression
-def evaluate_expression(expression):
-    current_number = 0
-    total = 0
-    last_sign = 1  # Start assuming the first number is positive
-
-    for char in expression:
-        if char.isdigit():
-            current_number = current_number * 10 + int(char)
-        elif char == '+' or char == '-':
-            total += last_sign * current_number
-            current_number = 0
-            last_sign = 1 if char == '+' else -1
-
-    # Add the last number
-    total += last_sign * current_number
-
-    return total
-
-# Example input and output
-expressions = ["12-5+3", "26-14+2-1", "7-0+3"]
-results = [evaluate_expression(expr) for expr in expressions]
-for expr, result in zip(expressions, results):
-    print(f'Input: {expr}, Output: {result}')
-
-
-## Example 28: Sequence Element Comparison
-
-**Problem:** Given a sequence of natural numbers that ends with the number `0`. Determine the largest number of elements in this sequence that go one after the other and are equal to each other (i.e., the longest consecutive sequence of identical elements). Also, print the element that is repeated most consecutively. If there are multiple elements with the same maximum consecutive count, the task does not specify which one to print, so we'll choose to print any one of them.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1<br>5<br>5<br>4<br>3<br>9<br>9<br>9<br>7<br>0 | 3<br>9 |
-| 2   | 1<br>2<br>3<br>4<br>0 | 1<br>No numbers were entered before 0. |
-| 3   | 1<br>1<br>1<br>1<br>0 | 4<br>1 |
-
+| 4   | 100+200-50   | 250     |
+| 5   | 10-5-2+8     | 11      |
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-max_count = 0
-max_element = None
-current_count = 1
-last_element = None
+expression = input("Enter the expression: ")
 
-number = int(input("Enter a number (0 to end): "))
-last_element = number
+result = 0
 
-while number != 0:
-    number = int(input("Enter a number (0 to end): "))
-    
-    if number == last_element:
-        current_count += 1
+# Initialize the first number
+number = 0
+
+# Initialize the sign to positive
+sign = 1
+
+for char in expression:
+    if char.isdigit():
+        number = number * 10 + int(char)
     else:
-        if current_count > max_count:
-            max_count = current_count
-            max_element = last_element
-        current_count = 1
-    
-    last_element = number
+        result += sign * number
+        number = 0
+        if char == '+':
+            sign = 1
+        elif char == '-':
+            sign = -1
 
-if current_count > max_count:
-    max_count = current_count
-    max_element = last_element
+result += sign * number
 
-print(f"Longest sequence length: {max_count}")
-if max_count > 0:
-    print(f"Most repeated element: {max_element}")
+```
+</details>
+
+
+
+
+
+## Example 29: Find Most Frequent Letters
+
+**Problem:** Given a string which may include spaces, determine which English alphabet letter(s) appear most frequently. Upper and lower case letters should be treated as the same, and non-letter characters are ignored. The program should output on the first line all letters that appear most frequently in the given string, in uppercase and alphabetical order without spaces. On the second line, output the number of times these letters appear in the string. The string must be processed in one pass without nested loops. Write a program to find and print the most frequent letters in the text.
+
+| No. | Inputs                                                              | Outputs   |
+| --- | ------------------------------------------------------------------- | --------- |
+| 1   | Project Gutenberg EBook of The jungle book, by Rudyard Kipling      | EO<br>6   |
+| 2   | Hello World                                                         | L<br>3    |
+| 3   | GitHub Copilot is awesome                                           | O<br>3    |
+| 4   | This is a test string                                               | I<br>3    |
+| 5   | The quick brown fox jumps over the lazy dog                         | O<br>4    |
+| 6   | The quick brown fox jumps over the lazy dog and the cat             | OTC<br>5  |
+
+<details open>
+<summary><b>Python Solution</b></summary>
+
+```python
+input_string = input("Enter a string: ")
+
+# Initialize a string to store the most frequent letters
+letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+# Initialize a string to store the count of each letter
+letter_count = ""
+
+for letter in letters:
+    current_letter_counter = 0
+    for char in input_string.upper():
+        if char.upper() == letter:
+            current_letter_counter += 1
+    letter_count += str(current_letter_counter)
+
+max_frequency = 0
+
+for count in letter_count:
+    if int(count) > max_frequency:
+        max_frequency = int(count)
+
+for i in range(len(letters)):
+    if int(letter_count[i]) == max_frequency:
+        print(letters[i], end='')
+print()
+print(max_frequency)
+```
+</details>
+
+
+
+
+## Example 30: Validate IP Address
+
+**Problem:** Determine if a given string is a valid IP address. An IP address is a four-byte code typically represented as four numbers separated by dots, where each number ranges from 0 to 255. The program should output "Yes" if the string is a valid IP address format and "No" otherwise.
+
+| No. | Inputs          | Outputs |
+| --- | --------------- | ------- |
+| 1   | C.E.R.N         | No      |
+| 2   | 192.168.0.200   | Yes     |
+| 3   | 256.0.0.255     | No      |
+| 4   | 10.0.0.1        | Yes     |
+| 5   | 172.16.0.0      | Yes     |
+| 6   | 192.168.1.1     | Yes     |
+
+<details open>
+<summary><b>Python Solution</b></summary>
+
+```python
+# Take input for the IP address
+ip = input("Enter an IP address: ")
+
+part = ''
+dot_count = 0
+valid = True
+part_count = 0
+
+# Iterate over each character in the IP address
+for i in range(len(ip)):
+    char = ip[i]
+    if char.isdigit():
+        part += char  # Build the part string
+    elif char == '.':
+        if part == '' or int(part) > 255 or i == 0 or (i > 0 and not ip[i-1].isdigit()):
+            valid = False
+            break
+        part_count += 1
+        part = ''  # Reset part on dot
+        dot_count += 1
+    else:
+        valid = False
+        break
+
+# Check the last part after the last dot or if no dots were found
+if valid and part != '' and int(part) <= 255:
+    part_count += 1
 else:
-    print("No numbers were entered before 0.")
+    valid = False
 
+# Must have exactly four parts and three dots to be valid
+if part_count != 4 or dot_count != 3:
+    valid = False
+
+# Print the result for each IP
+print("Yes" if valid else "No")
 ```
-
 </details>
 
-Дано рядок, який може міститити пропуски. Визначте, яка буква англійського алфавіту (або які букви) в цьому рядку зустрічається найчастіше. Великі і малі літери вважаються однаковими, а інші символи, які не є буквами, не враховуються. Програма повинна вивести в першому рядку всі букви, які зустрічаються найчастіше в заданому рядку. Виводити букви необхідно у верхньому регістрі, в алфавітному порядку (додатково), без пропусків. У другому рядку виведіть єдине число - скільки разів у цьому рядку зустрічаються ці літери. При виконанні цього завдання не можна користуватися вкладеними циклами. Вхідний рядок повинен оброблятися за один прохід.
 
-Вхідні дані:
-
-Project Gutenberg EBook of The jungle book, by Rudyard Kipling
-Вихідні дані:
-
-EO
-6
-
-## Example 29: Divisibility Graphical Representation
-
-**Problem:** Write a program to graphically represent the divisibility of numbers from `1` to `n` (the value of `n` is entered from the keyboard). In each line, print the next number and as many `+` characters as there are divisors of this number.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1     | 1+      |
-| 2   | 2     | 1+<br>2++ |
-| 3   | 3     | 1+<br>2++<br>3++ |
-| 4   | 4     | 1+<br>2++<br>3++<br>4+++ |
-| 5   | 5     | 1+<br>2++<br>3++<br>4+++<br>5++ |
-| 6   | 6     | 1+<br>2++<br>3++<br>4+++<br>5++<br>6++++ |
-| 7   | 7     | 1+<br>2++<br>3++<br>4+++<br>5++<br>6++++<br>7++ |
-| 8   | 8     | 1+<br>2++<br>3++<br>4+++<br>5++<br>6++++<br>7++<br>8++++ |
-| 9   | 9     | 1+<br>2++<br>3++<br>4+++<br>5++<br>6++++<br>7++<br>8++++<br>9++++ |
-| 10  | 10    | 1+<br>2++<br>3++<br>4+++<br>5++<br>6++++<br>7++<br>8++++<br>9++++<br>10++++ |
-
-<details open>
-<summary><b>Python Solution</b></summary>
-
-```python
-n = int(input("Enter the number: "))
-
-for i in range(1, n + 1):
-    divisors = 0
-    for j in range(1, i + 1):
-        if i % j == 0:
-            divisors += 1
-    print(f"{i}{'+' * divisors}")
-```
-
-</details>
-
-У мережі Інтернет кожному комп’ютері присвоюється IP-адреса (чотирьохбайтовий код, який прийнято записувати у вигляді чотирьох чисел, кожне з яких може приймати значення від 0 до 255 і між якими ставлять крапку). Ось приклади правильних IP-адрес: 192.168.0.1, 255.0.255.255, 10.10.0.2. Програма отримує на вхід рядок з довільних символів і якщо цей рядок є коректним записом IP-адреси, виведіть Yes, інакше виведіть No.
-
-Вхідні дані:
-
-C.E.R.N
-192.168.0.200
-256.0.0.255
-Вихідні дані:
-
-No
-Yes
-No
-
-## Example 30: Number Reversal
-
-**Problem:** Given a natural number `n`. Print the number that is the reverse of the order of its digits.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 125    | 521     |
-| 2   | 123456789 | 987654321 |
-| 3   | 1      | 1       |
-
-<details open>
-<summary><b>Python Solution</b></summary>
-
-```python
-n = int(input("Enter the number: "))
-temp_number = n
-
-reversed_number = 0
-
-# Solution 1
-while n > 0:
-    reversed_number = reversed_number * 10 + n % 10
-    n //= 10
-
-print(reversed_number)
-
-# Solution 2
-n = temp_number
-power = 0 
-while temp_number > 0:
-    temp_number //= 10
-    power += 1
-
-reversed_number = 0
-
-while n > 0:
-    current_digit = n % 10
-    number_to_add = current_digit * (10 ** (power - 1))
-    reversed_number += number_to_add
-    n //= 10
-    power -= 1
-
-print(reversed_number)
-```
-
-</details>
 
 
 **Notes:** All the examples above are solved using Python. You can find the solutions in the [examples](./examples) folder. Covered with explanations and comments, these examples will help you understand the practical implementation of the concepts covered in this module. Python tests are also included to verify the correctness of the solutions.
