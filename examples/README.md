@@ -649,46 +649,46 @@ print(longest_sequence)
 ```
 </details>
 
-Дано два слова. Складіть програму, що визначає чи можна чи ні з букв слова A скласти слово B. Програма має враховувати регістр літер введених слів.
 
-Вхідні дані:
 
-Python
-not
-Ruby
-Buy
-Вихідні дані:
+## Example 20: Can Construct
 
-Yes
-No
+**Problem:** Given two words, write a program that determines whether word B can be constructed from the letters of word A, taking into account the case sensitivity of the letters.
 
-## Problem 20: Quiz Winner Determination
+| No. | Inputs                | Outputs |
+| --- | --------------------- | ------- |
+| 1   | Python<br>not         | Yes     |
+| 2   | Ruby<br>Buy           | No      |
 
-**Problem:** High school students took part in a computer science quiz. They had to answer 20 questions. The winner of the quiz is the participant who correctly answered the most questions. How many questions did the winner answer correctly? If there are participants in the quiz who could not give a correct answer to any of the questions, print Yes, otherwise print No. It is guaranteed that there are participants who correctly answered at least one question. The program receives the number of quiz participants `n` (1 ≤ `n` ≤ 50) as input, then for each participant, the number of questions they answered correctly is entered.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 5<br>10<br>15<br>7<br>0<br>16 | 16<br>Yes |
-| 2   | 3<br>0<br>0<br>0<br>0 | 0<br>Yes |
-| 3   | 4<br>20<br>20<br>20<br>20 | 20<br>No |
+**Problem:** Check if it is possible to construct word B using the letters from word A, considering letter case sensitivity.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number of participants: "))
-max_score = 0
-failed_quiz = False
+# Take input for word A
+word_a = input("Enter word A: ")
+# Take input for word B
+word_b = input("Enter word B: ")
 
-for _ in range(n):
-    score = int(input("Enter the score: "))
-    if score > max_score:
-        max_score = score
-    elif score == 0:
-        failed_quiz = True
+# Check if word B can be constructed from word A
+can_construct = True
 
-print(max_score)
-print("Yes" if failed_quiz else "No")
+for char_b in word_b:
+    char_b_count = 0
+    char_a_count = 0
+    for char in word_b:
+        if char == char_b:
+            char_b_count += 1
+    for char in word_a:
+        if char == char_b:
+            char_a_count += 1
+    if char_b_count > char_a_count:
+        can_construct = False
+        break
+
+# Output result
+print("Yes" if can_construct else "No")
 ```
 </details>
 
