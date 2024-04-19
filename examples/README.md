@@ -772,8 +772,9 @@ while i < len(expression):
 # Print the final result
 print(result)
 ```
-
 </details>
+
+
 
 ## Example 23: Count String Occurrences
 
@@ -804,9 +805,13 @@ for i in range(len(a) - len(b) + 1):  # Only go up to where B can fully fit in A
 
 # Print the number of occurrences
 print(count)
+```
 </details>
+
 <details open>
 <summary><b>Solution Two</b></summary>
+ 
+```python
 # Input string A
 a = input("Enter string A: ")
 # Input string B
@@ -826,8 +831,8 @@ while True:
 
 # Print the number of occurrences
 print(count)
-</details>
 ```
+</details>
 
 ## Example 23: Least Common Multiple Calculation
 
