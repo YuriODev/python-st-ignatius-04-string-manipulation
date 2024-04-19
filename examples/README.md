@@ -788,7 +788,7 @@ print(result)
 **Problem:** Write a program that prints the number of times string B occurs in string A using two different approaches.
 
 <details open>
-<summary><b>Solution One - Non `find` Method Approach</b></summary>
+<summary><b>Solution One</b></summary>
 
 ```python
 # Input string A
@@ -806,7 +806,7 @@ for i in range(len(a) - len(b) + 1):  # Only go up to where B can fully fit in A
 print(count)
 </details>
 <details open>
-<summary><b>Solution Two - Using `find` Method</b></summary>
+<summary><b>Solution Two</b></summary>
 # Input string A
 a = input("Enter string A: ")
 # Input string B
