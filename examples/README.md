@@ -871,109 +871,108 @@ print(formatted_number)
 
 </details>
 
-Користувач вводить рядок цифр без пропусків. Необхідно написати програму, яка «розіб’є» це число на трійки цифр справа наліво комами. Якщо число містить менше трьох цифр, то воно виводиться без змін.
 
-Вхідні дані:
+## Example 25: Find and Replace Substring
 
-4567
-123
-2348906
-Вихідні дані:
-
-4,567
-123
-2,348,906
-
-## Example 24: Monotonous Sequence Printing
-
-**Problem:** Given a natural number `n`. Print the first `n` members of the sequence. The sequence is a monotonous sequence in which each natural number `k` occurs exactly `k` times: 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, ....
+**Problem:** Write a program that decrypts an input text using the method described.
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 1     | 1       |
-| 2   | 2     | 1 2     |
-| 3   | 3     | 1 2 2   |
-| 4   | 4     | 1 2 2 3 |
-| 5   | 5     | 1 2 2 3 3 |
-| 6   | 6     | 1 2 2 3 3 3 |
-| 7   | 7     | 1 2 2 3 3 3 4 |
+| 1   | Njzxwxgd Bpihjbdid, rgtpidg du iwt Gjqn egdvgpbbxcv apcvjpvt. | Yukihiro Matsumoto, creator of the Ruby programming language. |
+| 2   | Wklv, qmzv, wklv, qmzv, wklv, qmzv. | This, that, this, that, this, that. |
+
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
+# Input encrypted text
+text = input("Enter encrypted text: ")
 
-i = 1
-count = 0
+# Determine the number of letters 'k' in the longest word
+k = 0
+current_length = 0
+max_length = 0
 
-while count < n:
-    for _ in range(i):
-        if count < n:
-            print(i, end=" ")
-            count += 1
-    i += 1
+for char in text:
+    if char.isalpha():
+        current_length += 1
+    else:
+        if current_length > max_length:
+            max_length = current_length
+        current_length = 0
+
+if current_length > max_length:
+    max_length = current_length
+
+k = max_length
+
+# Decrypt the text directly in the loop
+decrypted_text = ''
+for char in text:
+    if 'a' <= char <= 'z':  # Lowercase letters
+        new_pos = (ord(char) - ord('a') - k) % 26 + ord('a')
+        decrypted_text += chr(new_pos)
+    elif 'A' <= char <= 'Z':  # Uppercase letters
+        new_pos = (ord(char) - ord('A') - k) % 26 + ord('A')
+        decrypted_text += chr(new_pos)
+    else:
+        decrypted_text += char  # Non-alphabet characters remain unchanged
+
+# Output the decrypted text
+print(decrypted_text)
 ```
 
 </details>
 
-Дано текст і відомо, що він шифрується наступним чином. Спочатку визначається кількість букв k в найдовшому слові (словом називається безперервна послідовність англійських букв, слова один від одного відокремлюються будь-якими іншими символами, довжина слова не перевищує 20 символів). Потім кожна англійська літера замінюється на букву, що стоїть в алфавіті на k букв раніше (алфавіт вважається циклічним, тобто перед буквою A стоїть буква Z). Інші символи залишаються незмінними. Малі літери при цьому залишаються малими, а великі - великими. Розшифруйте введений текст.
+## Example 26: Find Shortest Word and Its Length
 
-Вхідні дані:
+**Problem:** In the given string, find the shortest word, and display this word along with its length in characters. Words may be separated by spaces, multiple spaces, punctuation marks, digits, etc. If there are multiple shortest words, only display the first one. The string of words is guaranteed to end with a period.
 
-Njzxwxgd Bpihjbdid, rgtpidg du iwt Gjqn egdvgpbbxcv apcvjpvt.
-Вихідні дані:
+| No. | Inputs                         | Outputs  |
+| --- | ------------------------------ | -------- |
+| 1   | He lives in house number 4.    | He 2     |
+| 2   | Now is better than never.      | is 2     |
+| 3   | Tom Tells the Truth.           | Tom 3    |
 
-Yukihiro Matsumoto, creator of the Ruby programming language.
-
-## Example 25: Fibonacci Number Determination
-
-**Problem:** Given a natural number `n`. Determine which Fibonacci number it is. If `n` is not a Fibonacci number, print the value `-1`. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence goes: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, and so on.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 11     | -1      |
-| 2   | 8      | 6       |
-| 3   | 13     | 7       |
-| 4   | 21     | 8       |
+**Problem:** Write a program that finds and prints the shortest word in the input text along with its length using only string operations.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
+# Input a sentence from the user
+sentence = input("Enter a sentence ending with a period: ")
 
-a = 0
-b = 1
-c = 0
-count = 0
+# Remove the trailing period for ease of processing
+sentence = sentence[:-1]
 
-while c < n:
-    c = a + b
-    a = b
-    b = c
-    count += 1
+# Initialize variables to find the shortest word and its length
+shortest_word = ''
+min_length = len(sentence)
+current_word = ''
 
-if c == n:
-    print(count)
-else:
-    print(-1)
-```
+# Traverse each character in the sentence
+for char in sentence:
+    # Build a word while iterating through alphabetical characters
+    if char.isalpha():
+        current_word += char
+    else:
+        # Check if a word was built and is shorter than the known shortest word
+        if current_word and (len(current_word) < min_length):
+            shortest_word = current_word
+            min_length = len(current_word)
+        # Reset current word after saving
+        current_word = ''
 
-</details>
+# Final check for the last word in case the sentence ends directly after it
+if current_word and (len(current_word) < min_length):
+    shortest_word = current_word
+    min_length = len(current_word)
 
-У заданому рядку знайти найкоротше слово, вивести це слово і його розмір у символах. Слова можуть бути розділені пропусками, декількома пропусками, знаками пунктуації, цифрами тощо. Якщо найкоротших слів є кілька, вивести лише перше з них. Рядок слів гарантовано закінчується крапкою.
+# Output the shortest word and its length
+print(f'{shortest_word} {min_length}')
 
-Вхідні дані:
-
-He lives in house number 4.
-Now is better than never.
-Tom Tells the Truth.
-Вихідні дані:
-
-He 2
-is 2
-Tom 3
 
 ## Example 26: Sequence Element Comparison
 
@@ -1005,61 +1004,97 @@ print(count)
 
 </details>
 
-Кодування довжин послідовностей - це базовий алгоритм стиснення даних. Реалізуйте один з найпростіших його варіантів. На вхід алгоритму подається рядок, що містить символи англійського алфавіту. Цей рядок розбивається на групи однакових символів, що йдуть підряд («серії»). Кожна серія характеризується символом і кількістю повторень. Саме ця інформація і записується в код: спочатку пишеться довжина серії повторюваних символів, потім сам символ. У серій довжиною в один символ кількість повторень не записується.
+## Example 27: Run-Length Encoding
 
-Вхідні дані:
+**Problem:** Implement a simple version of the run-length encoding (RLE) data compression algorithm. The algorithm receives a string containing English alphabet characters. This string is split into groups of consecutive identical characters ("runs"). Each run is characterized by the character and the number of repetitions. This information is then encoded: the length of the run of repeated characters is written first, followed by the character itself. If a run consists of only one character, the count is omitted.
 
-aaabccccCCaB
-aabcccddffffffffff
-Вихідні дані:
+| No. | Inputs                  | Outputs        |
+| --- | ----------------------- | -------------- |
+| 1   | aaabccccCCaB            | 3ab4c2CaB      |
+| 2   | aabcccddffffffffff      | 2ab3c2d10f     |
 
-3ab4c2CaB
-2ab3c2d10f
-
-## Example 27:
-
-**Problem:** Given a sequence of natural numbers that ends with the number `0`. Determine how many elements of this sequence are equal to its largest element.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 3<br>8<br>10<br>2<br>10<br>7<br>0 | 2 |
-| 2   | 1<br>2<br>3<br>4<br>0 | 1 |
-| 3   | 1<br>1<br>1<br>1<br>0 | 4 |
+**Problem:** Write a program that outputs a run-length encoding of the input text.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-max_number = 0
-max_count = 0
+# Input string
+input_string = input("Enter a string: ")
 
-while True:
-    number = int(input("Enter the number: "))
-    if number == 0:
-        break
-    if number > max_number:
-        max_number = number
-        max_count = 1
-    elif number == max_number:
-        max_count += 1
+# Variable to store the encoded result
+encoded_string = ""
 
-print(max_count)
+# Initialize count and previous character
+count = 1
+previous_char = input_string[0]
+
+# Iterate over the string starting from the second character
+for char in input_string[1:]:
+    if char == previous_char:
+        count += 1
+    else:
+        # Append the count and character to the result string if count is more than 1
+        if count > 1:
+            encoded_string += str(count)
+        encoded_string += previous_char
+        # Reset the count and update previous character
+        previous_char = char
+        count = 1
+
+# Handle the last run
+if count > 1:
+    encoded_string += str(count)
+encoded_string += previous_char
+
+# Print the encoded string
+print(encoded_string)
+
 ```
 
 </details>
 
-Дано рядок, що містить одне або більше цілих чисел від 0 до 1000000000, розділених знаками + або -. Розрахуйте значення цього виразу.
+## Example 28: Evaluate Simple Arithmetic Expression
 
-Вхідні дані:
+**Problem:** Given a string containing one or more integers between 0 and 1,000,000,000, separated by '+' or '-' signs, calculate the value of this expression.
 
-12-5+3
-26-14+2-1
-7-0+3
-Вихідні дані:
+| No. | Inputs       | Outputs |
+| --- | ------------ | ------- |
+| 1   | 12-5+3       | 10      |
+| 2   | 26-14+2-1    | 13      |
+| 3   | 7-0+3        | 10      |
 
-10
-13
-10
+**Problem:** Write a program that calculates and outputs the result of evaluating these arithmetic expressions.
+
+<details open>
+<summary><b>Python Solution</b></summary>
+
+```python
+# Function to evaluate the given arithmetic expression
+def evaluate_expression(expression):
+    current_number = 0
+    total = 0
+    last_sign = 1  # Start assuming the first number is positive
+
+    for char in expression:
+        if char.isdigit():
+            current_number = current_number * 10 + int(char)
+        elif char == '+' or char == '-':
+            total += last_sign * current_number
+            current_number = 0
+            last_sign = 1 if char == '+' else -1
+
+    # Add the last number
+    total += last_sign * current_number
+
+    return total
+
+# Example input and output
+expressions = ["12-5+3", "26-14+2-1", "7-0+3"]
+results = [evaluate_expression(expr) for expr in expressions]
+for expr, result in zip(expressions, results):
+    print(f'Input: {expr}, Output: {result}')
+
 
 ## Example 28: Sequence Element Comparison
 
