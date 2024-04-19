@@ -12,1286 +12,696 @@ Here are the exercises for the Python Basics module. These exercises are designe
 
 
 
-## Exercise 1: Countdown Timer - Easy 😊 (Est. Time: 5 mins | Points: 10)
+## Exercise 1: Double the Number - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-**Problem:** Write a program timer that asks the user for the number of seconds n to start the countdown from.
+**Problem:** Given a natural number, find the number formed by appending the same number to itself.
 
 ### Input:
-- An integer representing the number of seconds to start the countdown from.
+- A natural number.
 
 ### Output:
-- A countdown from n to 1, followed by the message "Start!".
+- The number formed by appending the input number to itself.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 5      | 5<br>4<br>3<br>2<br>1<br>Start! |
-| 2   | 3      | 3<br>2<br>1<br>Start! |
-| 3   | 1      | 1<br>Start! |
+| 1   | 125    | 125125  |
+| 2   | 6      | 66      |
+| 3   | 1      | 11      |
+| 4   | 999    | 29992   |
+| 5   | 0      | 202     |
 
 ### Note:
-The problem tests the ability to use loops and conditional statements to implement a countdown timer.
+The problem tests the ability to manipulate strings and integers to construct a new number.
 
+## Exercise 2: Title Case Conversion - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-## Exercise 2: M Times N - Easy 😊 (Est. Time: 5 mins | Points: 10)
-
-**Problem:** Write a program that asks the user for two numbers `n` and `m` and prints the number `n` `m` times in a row.
+**Problem:** Given a string, change the case of the characters in the string such that the first letter of each word is uppercase and all other letters are lowercase.
 
 ### Input:
-- Two integers representing the numbers `n` and `m`.
+- A string representing a sentence.
 
 ### Output:
-- The number `n` printed `m` times in a row.
+- The sentence with each word's first letter capitalized and all other letters in lowercase.
 
 ### Examples:
 
-| No. | Inputs | Outputs               |
-| --- | ------ | --------------------- |
-| 1   | 10<br>5 | 10 10 10 10 10 |
-| 2   | 3<br>3  | 3 3 3 |
-| 3   | 7<br>1  | 7 |
+| No. | Inputs                                  | Outputs                                  |
+| --- | --------------------------------------- | ---------------------------------------- |
+| 1   | A scandal in Bohemia                    | A Scandal In Bohemia                     |
+| 2   | The adventure of the Blue Carbuncle     | The Adventure Of The Blue Carbuncle      |
+| 3   | The Boscombe valley mystery             | The Boscombe Valley Mystery              |
+| 4   | The Hound of the Baskervilles           | The Hound Of The Baskervilles            |
+| 5   | The Sign of Four                        | The Sign Of Four                         |
 
 ### Note:
-The problem tests the ability to use loops and conditional statements to print a number multiple times.
+The problem tests the ability to use string manipulation functions to format text properly.
 
 
-## Exercise 3: Sequence of Integers - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
+## Exercise 3: Add Twos to Number - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-**Problem:** Write a program to output all integers from `20` to `n` inclusive (where `n > 20`), where `n` is an integer entered by the user.
-
+**Problem:** Given a natural number, find the number that results from appending the digit '2' to both the beginning and the end of the input number.
 
 ### Input:
-- An integer representing the upper limit of the range.
+- A natural number.
 
 ### Output:
-- A sequence of integers from `20` to `n` inclusive.
+- The number formed by appending '2' to both the beginning and end of the input number.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 25     | 20 21 22 23 24 25 |
-| 2   | 30     | 20 21 22 23 24 25 26 27 28 29 30 |
-| 3   | 37     | 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 |
-| 4   | 20     | 20 |
+| 1   | 45     | 2452    |
+| 2   | 1      | 212     |
+| 3   | 0      | 202     |
+| 4   | 999    | 29992   |
+| 5   | 1234   | 212342  |
 
 ### Note:
-The problem tests the ability to use loops and conditional statements to print a sequence of numbers.
+This problem tests string manipulation skills, focusing on modifying numerical strings by appending and prepending characters.
 
-## Exercise 4: Number of # Characters - Easy 😊 (Est. Time: 5 mins | Points: 10)
+## Exercise 4: Letter Match - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-**Problem:** Write a program to print integers from `1` to `n` with the number of `#` characters equal to the value of the number.
+**Problem:** Given two words, determine if the first word starts with the same letter that the second word ends with.
 
 ### Input:
-- An integer representing the upper limit of the range.
+- Two words.
 
 ### Output:
-- A sequence of integers from `1` to `n` inclusive, with the number of `#` characters equal to the value of the number.
+- "True" if the first word starts with the same letter the second word ends with, otherwise "False".
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 5      | 1 #<br>2 ##<br>3 ###<br>4 ####<br>5 ##### |
-| 2   | 3      | 1 #<br>2 ##<br>3 ### |
-| 3   | 7      | 1 #<br>2 ##<br>3 ###<br>4 ####<br>5 #####<br>6 ######<br>7 ####### |
+| No. | Inputs     | Outputs |
+| --- | ---------- | ------- |
+| 1   | Python<br>Ruby | False |
+| 2   | Java<br>JavaScript | True |
+| 3   | C++<br>C# | True |
+| 4   | HTML<br>CSS | False |
+| 5   | PHP<br>Python | True |
 
 ### Note:
-The problem tests the ability to use conditional statements to classify an input into one of several categories.
+The problem tests the ability to manipulate and compare string characters effectively.
 
-## Exercise 5: Sum of Integers - Easy 😊 (Est. Time: 5 mins | Points: 10)
+## Exercise 5: Substring Check - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-**Problem:** Write a program to calculate the sum of all integers from `1` to `n` inclusive.
+**Problem:** Given two strings that may contain spaces, print "Yes" if the first string is a substring of the second string, otherwise print "No".
 
 ### Input:
-- An integer representing the upper limit of the range.
+- Two strings.
 
 ### Output:
-- An integer representing the sum of all integers from `1` to `n` inclusive.
+- "Yes" if the first string is a substring of the second string, otherwise "No".
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 100    | 5050 |
-| 2   | 16     | 136 |
-| 3   | 1      | 1 |
+| 1   | Lords of the World<br>But who shall dwell in these worlds if they be inhabited? Are we or they Lords of the World? And how are all things made for man? | Yes |
+| 2   | 12345   | Your message includes numbers only.       |
+| 3   | ABCDEF  | Your message includes letters only.       |
+| 4   | Hello123World | Your message includes numbers and letters.|
 
 ### Note:
-The problem tests the ability to solve a quadratic equation and handle different cases of discriminant values.
+This problem examines the ability to work with substrings and perform string searches.
 
-## Exercise 6: Star Pattern - Easy 😊 (Est. Time: 10-15 mins | Points: 10)
+## Exercise 6: Character Content Analysis - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-**Problem:** Write a program to print a pattern of `*` characters as shown in the output for a given value of `n`.
+**Problem:** Write a program to check what characters a string entered by the user consists of: only digits, only letters, or both letters and digits.
 
 ### Input:
-- An integer representing the number of rows in the pattern.
+- A string.
 
 ### Output:
-- A pattern of `*` characters as shown in the examples.
-
+- A message specifying if the string contains only letters, only digits, or both.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 5      | *<br>\*\*<br>\*\*\*<br>\*\*\*\*<br>\*\*\*\*\* |
-| 2   | 3      | *<br>\*\*<br>\*\*\* |
-| 3   | 7      | *<br>\*\*<br>\*\*\*<br>\*\*\*\*<br>\*\*\*\*\*<br>\*\*\*\*\*\*<br>\*\*\*\*\*\*\* |
+| No. | Inputs     | Outputs                                   |
+| --- | ---------- | ----------------------------------------- |
+| 1   | abc        | Your message includes letters only.       |
+| 2   | Street122  | Your message includes numbers and letters.|
+| 3   | 23         | Your message includes numbers only.       |
+| 4   | HelloWorld | Your message includes letters only.       |
+| 5   | 12345      | Your message includes numbers only.       |
 
 ### Note:
+This problem helps practice string manipulation and character classification.
 
-The problem tests the ability to use loops and conditional statements to print a pattern of characters.
+## Exercise 7: Replace Digits with Words - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-
-## Exercise 7: Hash Pattern - Easy 😊 (Est. Time: 10-15 mins | Points: 10)
-
-**Problem:** Write a program to print a pattern of `#` characters as shown in the output for a given value of `n`.
+**Problem:** Given a string, replace all occurrences of the digit '4' with the word "Four".
 
 ### Input:
-- An integer representing the number of rows in the pattern.
+- A string.
 
 ### Output:
-- A pattern of `#` characters as shown in the examples.
-
+- The modified string where all '4's have been replaced with "Four".
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 5      | ##<br>#&nbsp;#<br>#&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;# |
-| 2   | 3      | ##<br>#&nbsp;#<br>#&nbsp;&nbsp;# |
-| 3   | 7      | ##<br>#&nbsp;#<br>#&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#<br>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# |
-
+| No. | Inputs                                 | Outputs                                         |
+| --- | -------------------------------------- | ----------------------------------------------- |
+| 1   | 4 Christmases                          | Four Christmases                                |
+| 2   | Fantastic 4                            | Fantastic Four                                  |
+| 3   | The Nutcracker and the 4 Realms        | The Nutcracker and the Four Realms              |
+| 4   | 4 score and 7 years ago                | Four score and 7 years ago                      |
+| 5   | 4th of July                            | Fourth of July                                  |
 
 ### Note:
+Focus on string replacement techniques for specific characters.
 
-The problem tests the ability to use loops and conditional statements to print a pattern of characters.
+## Exercise 8: Uppercase Specific Letter - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-
-## Exercise 8: Even Numbers - Easy 😊 (Est. Time: 10-15 mins | Points: 10)
-
-**Problem:** Write a program to print all even numbers from `1` to `n` in a single row separated by a space. Use the `continue` statement to skip odd numbers.
+**Problem:** Write a program that replaces all occurrences of a specified lowercase letter in a string with its uppercase counterpart. First, input the letter, then the string.
 
 ### Input:
-- An integer representing the upper limit of the range.
+- A character (the letter to change).
+- A string.
 
 ### Output:
-- A sequence of even numbers from `1` to `n` inclusive, separated by a space.
+- The string with the specified letter changed to uppercase.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 10     | 2 4 6 8 10 |
-| 2   | 7      | 2 4 6 |
-| 3   | 20     | 2 4 6 8 10 12 14 16 18 20 |
+| 1   | a<br>"Curiouser and curiouser!" cried Alice (she was so much surprised that for the moment she quite forgot how to speak good English). | "Curiouser And curiouser!" cried Alice (she wAs so much surprised thAt for the moment she quite forgot how to speAk good English). |
+| 2   | b<br>"The quick brown fox jumps over the lazy dog." | "The quick brown fox jumps over the lAzy dog." |
+| 3   | c<br>"Coding is fun!" | "Coding is fun!" |
+| 4   | d<br>"Don't worry, be happy!" | "Don't worry, be hAppy!" |
 
 ### Note:
-The problem tests the ability to work with digits of a number.
+This tests basic string manipulation and character transformation.
 
-## Exercise 9: Multiples of a Number - Easy 😊 (Est. Time: 10-15 mins | Points: 10)
+## Exercise 9: Swap First and Last Characters - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-**Problem:** Write a program to print all integers from `a` to `b` inclusive that are multiples of `c`. The numbers `a`, `b`, and `c` are integers entered by the user.
+**Problem:** Write a program that swaps the first and last characters of a user-entered string.
 
 ### Input:
-- Three integers representing the lower limit `a`, upper limit `b`, and the multiple `c`.
+- A string.
 
 ### Output:
-- A sequence of integers from `a` to `b` inclusive that are multiples of `c`.
+- The string with the first and last characters swapped.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1<br>10<br>2 | 2 4 6 8 10 |
-| 2   | 3<br>15<br>3 | 3 6 9 12 15 |
-| 3   | 5<br>20<br>5 | 5 10 15 20 |
+| No. | Inputs      | Outputs      |
+| --- | ----------- | ------------ |
+| 1   | Hong Kong   | gong KonH    |
+| 2   | Antarctica  | antarcticA   |
+| 3   | Hello World | dlroW olleH  |
+| 4   | GitHub Copilot | topiloC buhtiG |
+| 5   | Programming is fun | nuf si gnimmargorP |
 
 ### Note:
-The problem tests the ability to work with digits of a number and compare their values.
+This exercise is great for learning about string indexing and manipulation.
 
+## Exercise 10: Sum of Digits - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-## Exercise 10: Pound to Kilogram Table - Easy 😊 (Est. Time: 10-15 mins | Points: 10)
-
-**Problem:** Write a program to print a table of equivalence between mass in pounds and mass in kilograms for the values of `n` pounds (1 pound = 453 grams) in the form of a table.
+**Problem:** Given a positive three-digit number, find the sum of its digits. Do not use integer division or modulus operations.
 
 ### Input:
-- An integer representing the number of pounds.
+- A three-digit integer.
 
 ### Output:
-- A table of equivalence between mass in pounds and mass in kilograms for the values of `n` pounds.
+- The sum of the digits.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 5      | 1 0.45<br>2 0.91<br>3 1.36<br>4 1.81<br>5 2.27 |
-| 2   | 3      | 1 0.45<br>2 0.91<br>3 1.36 |
-| 3   | 7      | 1 0.45<br>2 0.91<br>3 1.36<br>4 1.81<br>5 2.27<br>6 2.72<br>7 3.18 |
+| 1   | 179    | 17      |
+| 2   | 246    | 12      |
+| 3   | 503    | 8       |
+| 4   | 888    | 24      |
+| 5   | 999    | 27      |
 
 ### Note:
+Emphasizes string manipulation and conversion between data types without using direct numeric operations.
 
-The problem tests the ability to use loops and conditional statements to print a table of values.
+## Exercise 11: Find Last Word - Easy 😊 (Est. Time: 5 mins | Points: 10)
 
-
-## Exercise 11: Sum of a Series - Easy 😊 (Est. Time: 5 mins | Points: 10)
-
-**Problem:** Write a program to calculate the sum of the expression `1/2 + 2/3 + 3/4 + …​ + n/(n + 1)` for a given value of `n`.
+**Problem:** Write a program that outputs the last word in a string. A word is a sequence of non-space characters bounded by spaces or the ends of the string.
 
 ### Input:
-- An integer representing the upper limit of the range.
+- A string.
 
 ### Output:
-- A floating-point number representing the sum of the expression `1/2 + 2/3 + 3/4 + …​ + n/(n + 1)`.
+- The last word in the string.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 5      | 3.55 |
-| 2   | 10     | 7.98 |
-| 3   | 3      | 1.92 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the sum of a series.
-
-
-
-## Exercise 12: Sum of Three-Digit Numbers - Easy 😊 (Est. Time: 5 mins | Points: 10)
-
-**Problem:** Write a program to calculate the sum of all three-digit numbers that are divisible by `n`, where `n` is an integer entered by the user.
-
-### Input:
-- An integer representing the number `n`.
-
-### Output:
-- An integer representing the sum of all three-digit numbers that are divisible by `n`.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 125    | 3500 |
-| 2   | 440    | 1320 |
-| 3   | 600    | 600 |
-| 4   | 1000   | 0 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the sum of a sequence of numbers.
-
-
-## Exercise 13: Password Validation - Easy 😊 (Est. Time: 5 mins | Points: 10)
-
-**Problem:** Write a program to prompt the user for a password. If the user enters the wrong password, the program should display an error message and prompt the user to try again. If the user enters the correct password, the program should display a success message.
-
-### Input:
-- An integer representing the password.
-- A sequence of integers representing the password entered by the user.
-
-### Output:
-- A message indicating whether the password is correct or incorrect.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 12345  | 111<br>Error<br>45<br>Error<br>12345<br>Done |
-| 2   | 123    | 111<br>Error<br>45<br>Error<br>12345<br>Error<br>123<br>Done |
-| 3   | 111    | 111<br>Done |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to validate user input.
-
-## Exercise 14: Count of Zeros - Easy 😊 (Est. Time: 5 mins | Points: 10)
-
-**Problem:** Write a program to determine how many of `n` numbers are equal to zero and output this count.
-
-### Input:
-- An integer `n` representing the number of integers to be entered.
-- `n` integers representing the numbers.
-
-### Output:
-- An integer representing the count of numbers that are equal to zero.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 4<br>0<br>23<br>11<br>0 | 2 |
-| 2   | 3<br>0<br>0<br>0 | 3 |
-| 3   | 5<br>1<br>2<br>3<br>4<br>5 | 0 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to count the number of occurrences of a specific value.
-
-## Exercise 16: Staircase Pattern - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-**Problem:** Write a program to draw a staircase as shown in the output for a given value of `n`.
-
-### Input:
-- An integer representing the number of steps in the staircase.
-
-### Output:
-- A staircase as shown in the examples.
-
-### Examples:
-
-| No. | Inputs | Outputs Reference |
-| --- | ------ | ----------------- |
-| 1   | 4      | Pattern 1         |
-| 2   | 3      | Pattern 2         |
-| 3   | 7      | Pattern 3         |
-
-### Output Patterns
-
-#### Pattern 1
-```
-   #
-  ##
- ###
-####
-```
-
-#### Pattern 2
-```
-  #
- ##
-###
-```
-
-#### Pattern 3
-```
-     #
-    ##
-   ###
-  ####
- #####
-######
-```
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to print a pattern of characters.
-
-## Exercise 17: Number Pattern - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to draw a pattern as shown in the output for a given value of `n` and `m`.
-
-### Input:
-- Two integers representing the number of rows `n` and the number of columns `m`.
-
-### Output:
-- A pattern as shown in the examples.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 6<br>3 | Pattern 1 |
-| 2   | 3<br>3 | Pattern 2 |
-| 3   | 3<br>7 | Pattern 3 |
-
-### Output Patterns
-
-#### Pattern 1
-```
-0 	0 	0
-1 	1 	1
-2 	2 	2
-3 	3 	3
-4 	4 	4
-5 	5 	5
-```
-
-#### Pattern 2
-```
-0 	0 	0
-1 	1 	1
-2 	2 	2
-```
-
-#### Pattern 3
-```
-0 	0 	0 	0 	0 	0 	0
-1 	1 	1 	1 	1 	1 	1
-2 	2 	2 	2 	2 	2 	2
-```
-
-
-## Exercise 18: Number Pattern - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to determine the total number of erors collected over `n` days.
-
-### Input:
-- An integer `n` representing the number of days.
-- `n` integers representing the number of errors collected each day.
-
-### Output:
-- An integer representing the total number of errors collected over `n` days.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 6<br>45<br>101<br>67<br>43<br>21<br>0 | 277 |
-| 2   | 3<br>0<br>0<br>0 | 0 |
-| 3   | 5<br>1<br>2<br>3<br>4<br>5 | 15 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the sum of a sequence of numbers.
-
-## Exercise 19: Sum of Squares - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to print all two-digit numbers, the sum of the squares of the digits of which is divisible by `n`. The number `n` is an integer entered by the user.
-
-### Input:
-
-- An integer representing the number `n`.
-
-### Output:
-
-- A sequence of two-digit numbers, the sum of the squares of the digits of which is divisible by `n`.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 5 | 	12, 13, 17, 18, 21, 24, 26, 29, 31, 34, 36, 39, 42, 43, 47, 48, 50, 55, 62, 63, 67, 68, 71, 74, 76, 79, 81, 84, 86, 89, 92, 93, 97, 98 |
-| 2 | 7 | 70, 77 |
-| 3 | 10 | 13, 17, 24, 26, 29, 31, 34, 36, 39, 42, 43, 47, 48, 51, 53, 54, 57, 58, 62, 63, 67, 68, 71, 74, 76, 79, 82, 83, 87, 88, 91, 93, 94, 97, 98 |
-| 4 | 100 | 68, 86|
-| 5 | 162 | 99 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to print a sequence of numbers.
-
-
-## Exercise 20: Odd Numbers - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to print all odd numbers from `1` to `b`, where `b` is an integer entered by the user. You cannot use the branching construct.
-
-### Input:
-
-- An integer representing the upper limit of the range.
-
-### Output:
-
-- A sequence of odd numbers from `1` to `b` inclusive.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 15 | 1 3 5 7 9 11 13 15 |
-| 2 | 8 | 1 3 5 7 |
-| 3 | 5 | 1 3 5 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to print a sequence of numbers.
-
-## Exercise 21: Sum of Factorials - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to calculate the sum of the factorials of all integers from `1` to `n` inclusive.
-
-### Input:
-
-- An integer representing the upper limit of the range.
-
-### Output:
-
-- An integer representing the sum of the factorials of all integers from `1` to `n` inclusive.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 3 | 9 |
-| 2 | 4 | 33 |
-| 3 | 5 | 153 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the sum of a series.
-
-## Exercise 22: Number Pattern - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to print all integers formed from the input number by discarding the last digit from each previous number.
-
-### Input:
-
-- An integer representing the input number.
-
-### Output:
-
-- A sequence of integers formed from the input number by discarding the last digit from each previous number.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 138945 | 13894<br> 1389<br> 138<br> 13<br> 1 |
-| 2 | 123456 | 12345<br> 1234<br> 123<br> 12<br> 1 |
-| 3 | 987654 | 98765<br> 9876<br> 987<br> 98<br> 9 |
-
-## Exercise 23: Average of a Sequence - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to calculate the average of all integers in a sequence that ends with the number `0`. The number `0` is not included in the sequence, but is used as a sign of its end.
-
-### Input:
-
-- A sequence of integers that ends with the number `0`.
-
-### Output:
-
-- A floating-point number representing the average of all integers in the sequence.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 3<br>4<br>5<br>0 | 4.0 |
-| 2 | 1<br>2<br>3<br>4<br>5<br>0 | 3.0 |
-| 3 | 10<br>20<br>30<br>40<br>50<br>0 | 30.0 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the average of a sequence of numbers.
-
-## Exercise 24: Even Numbers - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to determine the number of even elements in a sequence that ends with the number `0`. The number `0` is not included in the sequence, but is used as a sign of its end.
-
-### Input:
-
-- A sequence of integers that ends with the number `0`.
-
-### Output:
-
-- An integer representing the number of even elements in the sequence.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 3<br>6<br>9<br>8<br>0 | 2 |
-| 2 | 1<br>2<br>3<br>4<br>5<br>0 | 2 |
-| 3 | 10<br>20<br>30<br>40<br>50<br>0 | 5 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to count the number of occurrences of a specific value.
-
-
-## Exercise 25: Car Distance - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to determine the number of days it takes for a car to cover a distance greater than `t` km, where the car covers `d` km on the first day and increases its distance by 10% each day.
-
-### Input:
-
-- Two integers representing the distance `d` and the target distance `t`.
-
-### Output:
-
-- A floating-point number representing the total distance covered and an integer representing the number of days it takes to cover a distance greater than `t` km.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 10<br>100 | 114.36 km, 8 days |
-| 2 | 20<br>50 | 66.20 km, 3 days |
-| 3 | 5<br>25 | 30.53 km, 5 days |
-| 4 | 1<br>10 | 11.44 km, 8 days |
-| 5 | 50<br>100 | 155.13 km, 3 days |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the sum of a series.
-
-## Exercise 26: Sum of Digits - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to determine the number of three-digit numbers, the sum of the digits of which is equal to a certain integer value `n`, which is entered by the user.
-
-### Input:
-
-- An integer representing the number `n`.
-
-### Output:
-
-- An integer representing the number of three-digit numbers, the sum of the digits of which is equal to `n`.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 27 | 1 |
-| 2 | 2 | 3 |
-| 3 | 20 | 36 |
-
-# Note:
-
-The problem tests the ability to use loops and conditional statements to print a sequence of numbers.
-
-## Exercise 27: Sum of a Series - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to calculate the sum of the first `n` terms of the series `Pi = 4/1 - 4/3 + 4/5 - 4/7 + ...`.
-
-### Input:
-
-- An integer representing the number of terms in the series.
-
-### Output:
-
-- A floating-point number representing the sum of the first `n` terms of the series.
-
-### Examples:
-
-<!-- Pi = 4/1 - 4/3 + 4/5 - 4/7 + ... -->
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 10 | 3.0418396189294032 |
-| 2 | 5 | 3.3396825396825403 |
-| 3 | 15 | 3.017071817071818 |
-| 4 | 120 | 3.1332594798865546 |
-| 5 | 500 | 3.139592655589783 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the sum of a series.
-
-## Exercise 28: Product of Two Numbers - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Given integers a and b. Find their product without using the multiplication operation.
-
-### Input:
-
-- Two integers `a` and `b`.
-
-### Output:
-
-- An integer representing the product of `a` and `b`.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 7<br> 8 | 56 |
-| 2 | 5<br> 6 | 30 |
-| 3 | 3<br> 4 | 12 |
-| 4 | 10<br> 10 | 100 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the product of two numbers.
-
-
-## Exercise 29: Sum of Squares - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program that reads numbers (one per line) until the sum of the entered numbers equals 0, and immediately after that, outputs the sum of the squares of all the entered numbers. It is guaranteed that at some point the sum of the entered numbers will be 0, and reading should not continue after that.
-
-### Input:
-
-- A series of integers.
-
-### Output:
-
-- An integer representing the sum of the squares of all the entered numbers.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1<br>2<br>3<br>4<br>-4<br>-3<br>-2<br>-1 | 60 |
-| 2 | 1<br>2<br>3<br>4<br>-10 | 130 |
-| 3 | 1<br>2<br>3<br>4<br>-1<br>-2<br>-3<br>-4 | 60 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the sum of the squares of a sequence of numbers.
-
-## Exercise 30: Amoeba Division - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** A single-celled amoeba divides into `2` cells every `3` hours. Determine how many cells there will be after `t` hours if there was initially one amoeba.
-
-### Input:
-
-- An integer representing the number of hours `t`.
-
-### Output:
-
-- An integer representing the number of cells.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 6 | 4 |
-| 2   | 9 | 8 |
-| 3   | 24 | 256 |
-
-## Exercise 31: Lowest Temperature - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to determine the lowest temperature over a period of time and whether the temperature has dropped below -18 degrees.
-
-### Input:
-
-- An integer representing the number of days.
-- `n` integers representing the temperatures for each day.
-
-### Output:
-
-- An integer representing the lowest temperature and a string representing whether the temperature has dropped below -15 degrees.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 3<br>-20<br>2<br>-18 | -20<br>Yes |
-| 2   | 5<br>-10<br>-15<br>-20<br>-25<br>-30 | -30<br>Yes |
-| 3   | 7<br>-5<br>-10<br>-15<br>-20<br>-25<br>-30<br>-35 | -35<br>Yes |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the lowest temperature and determine whether it has dropped below a certain value.
-
-## Exercise 32: Car Speeds - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to determine the difference between the maximum and minimum speeds of the cars and the number of cars whose speed did not exceed 30 km/h. The program receives the number of recorded cars `n` (1 ≤ n ≤ 30) as input, followed by their speeds. The speed values cannot be less than 1 or greater than 300. The program should first output the difference between the maximum and minimum speeds of the cars, then the number of cars whose speed did not exceed 30 km/h.
-
-### Input:
-
-- An integer representing the number of recorded cars `n` (1 ≤ n ≤ 30).
-- `n` integers representing the speeds of the cars.
-
-### Output:
-
-- An integer representing the difference between the maximum and minimum speeds of the cars.
-- An integer representing the number of cars whose speed did not exceed 30 km/h.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 3<br>15<br>25<br>140 | 125<br>2 |
-| 2   | 5<br>10<br>20<br>30<br>40<br>50 | 40<br>3 |
-| 3   | 7<br>5<br>10<br>15<br>20<br>25<br>30<br>35 | 30<br>6 |
-
-### Note:
-
-The problem tests the ability to use loops and conditional statements to calculate the difference between the maximum and minimum speeds of the cars and the number of cars whose speed did not exceed a certain value.
-
-## Exercise 33: Two-Dimensional Table - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
-
-**Problem:** Write a program to output a two-dimensional square table of `n x n` numbers, where `n` is an integer entered by the user. The main diagonal of the table (from the top left value to the bottom right value) should contain `0`, above the main diagonal should be `1`, and below it should be `-1`. To display the table values nicely, use the tab character `\t`.
-
-### Input:
-
-- An integer representing the number `n`.
-
-### Output:
-
-- A two-dimensional square table of `n x n` numbers.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 5      | 0  1  1  1  1<br>-1 0 1 1 1<br>-1 -1 0 1 1<br>-1 -1 -1 0 1<br>-1 -1 -1 -1 0 |
-| 2   | 3      | 0 1 1<br>-1 0 1<br>-1 -1 0 |
-| 3   | 7      | 0 1 1 1 1 1 1<br>-1 0 1 1 1 1 1<br>-1 -1 0 1 1 1 1<br>-1 -1 -1 0 1 1 1<br>-1 -1 -1 -1 0 1 1<br>-1 -1 -1 -1 -1 0 1<br>-1 -1 -1 -1 -1 -1 0 |
+| No. | Inputs          | Outputs |
+| --- | --------------- | ------- |
+| 1   | Holmes & Watson | Watson  |
+| 2   | The quick brown fox jumps over the lazy dog. | dog.    |
+| 3   | Hello World     | World   |
+| 4   | GitHub Copilot  | Copilot |
+| 5   | Programming is fun and challenging. | challenging. |
 
 
 ### Note:
+Focuses on string splitting and element access.
 
-The problem tests the ability to use loops and conditional statements to print a two-dimensional square table of numbers.
 
-## Exercise 34: Number Pattern - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
+## Exercise 12: Penguin Display - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-**Problem:** Write a program to print a pattern of number characters as shown in the output for a given value of `n`.
+**Problem:** Write a program that, given a number `n` from 1 to 9, displays `n` penguins each with a corresponding number from 1 to `n`. Each penguin is 5 rows high and 9 characters wide, with an empty column of spaces between adjacent penguins. An empty column after the last penguin is also permitted. Output should be by row, not "per penguin".
 
 ### Input:
-
-- An integer representing the number of rows in the pattern.
+- An integer `n` (1 ≤ n ≤ 9).
 
 ### Output:
-
-- A pattern of number characters as shown in the examples.
+- A display of `n` penguins, each numbered sequentially.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 5      | 1<br>12<br>123<br>1234<br>12345 |
-| 2   | 3      | 1<br>12<br>123 |
-| 3   | 7      | 1<br>12<br>123<br>1234<br>12345<br>123456<br>1234567 |
+| 1   | 4      |         |
 
+### Output for Input Example 1
 
-## Exercise 35: Odd Numbers - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to print all `n`-digit odd natural numbers in descending order.
-
-### Input:
-
-- An integer representing the number `n`.
-
-### Output:
-
-- A sequence of `n`-digit odd natural numbers in descending order.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1      | 9 7 5 3 1 |
-| 2   | 2      | 99 97 95 93 91 89 87 85 83 81 79 77 75 73 71 69 67 65 63 61 59 57 55 53 51 49 47 45 43 41 39 37 35 33 31 29 27 25 23 21 19 17 15 13 11 |
+<pre>   _~_        _~_        _~_        _~_
+  (o o)      (o o)      (o o)      (o o)
+ /  V  \    /  V  \    /  V  \    /  V  \
+/(  1  )\  /(  2  )\  /(  3  )\  /(  4  )\
+  ^^ ^^      ^^ ^^      ^^ ^^      ^^ ^^</pre>
 
 ### Note:
+The problem tests the ability to use loops and string manipulation to construct a multi-line pattern output.
 
-The problem tests the ability to use loops and conditional statements to print a sequence of numbers.
+This exercise challenges the programmer to not only manage multiple loops and conditional statements but also to handle string formatting and alignment carefully to ensure the penguins display correctly.
 
 
-## Exercise 36: Greatest Common Divisor - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
+## Exercise 13: Extract Digits - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-**Problem:** Write a program to determine the greatest common divisor (GCD) of two natural numbers `a` and `b`. Use the Euclidean algorithm.
+**Problem:** Write a program to extract all digits from a given string and form a new string from them.
 
 ### Input:
-
-- Two natural numbers `a` and `b`.
+- A string that may contain any characters.
 
 ### Output:
-
-- An integer representing the greatest common divisor of the two numbers.
+- A new string consisting only of the digits extracted from the input string.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 8<br>2 | 2 |
-| 2   | 12<br>3 | 3 |
-| 3   | 15<br>5 | 5 |
+| No. | Inputs    | Outputs |
+| --- | --------- | ------- |
+| 1   | 3+3=6     | 336     |
+| 2   | 2 * 3 = 6 | 236     |
 
 ### Note:
+This exercise tests string manipulation, focusing on filtering characters.
 
-The problem tests the ability to use loops and conditional statements to calculate the greatest common divisor of two numbers.
+## Exercise 14: Remove Extra Spaces - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-## Exercise 37: Division Without Division - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-**Problem:** Write a program to determine the results of the integer division of `a` by `b` and the remainder of the division of `a` by `b`, without using the standard integer division and remainder operations.
+**Problem:** Given a string with several words separated by one or more spaces, remove all excess spaces including those at the beginning and end of the string.
 
 ### Input:
-
-- Two integers `a` and `b` (`a > b`).
+- A string containing up to 255 characters.
 
 ### Output:
-
-- Two integers representing the results of the integer division of `a` by `b` and the remainder of the division of `a` by `b`.
+- The string with all extra spaces removed.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 16<br>5 | 3 1 |
-| 2   | 20<br>3 | 6 2 |
-| 3   | 25<br>4 | 6 1 |
+| No. | Inputs                                                                                                        | Outputs                                                                                               |
+| --- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| 1   |    Beyond the green     swelling hills of the     Mittel Land rose mighty slopes of forest    up    to the lofty steeps of the Carpathians    themselves | Beyond the green swelling hills of the Mittel Land rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves |
 
 ### Note:
+The problem tests string trimming and space normalization.
 
-The problem tests the ability to use loops and conditional statements to calculate the results of the integer division and the remainder of the division of two numbers.
+## Exercise 15: Simple Expression Evaluator - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-## Exercise 38: Even Difference - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine whether the difference between the maximum and minimum digits of a natural number `n` is even.
+**Problem:** Evaluate a simple mathematical expression provided in the form 'A+B', 'A-B', or 'A*B', where A and B are integers from 0 to 1000000000.
 
 ### Input:
-
-- A natural number `n`.
+- A string representing a simple arithmetic expression.
 
 ### Output:
-
-- A boolean value representing whether the difference between the maximum and minimum digits of `n` is even.
+- The integer result of the expression.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 2134389 | True |
-| 2   | 1234 | False |
-| 3   | 123456789 | True |
+| 1   | 3*3    | 9       |
+| 2   | 50-49  | 1       |
+| 3   | 33+16  | 49      |
 
 ### Note:
+This problem tests basic arithmetic operations and string parsing.
 
-The problem tests the ability to use loops and conditional statements to determine whether a certain condition is met.
+## Exercise 16: ASCII Range Printer - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-
-## Exercise 39: Sum of Digits - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to calculate the sum of the digits of an integer `n`. The program should take into account that a negative integer may be entered.
+**Problem:** Given two characters, print all ASCII characters that lie between them inclusively.
 
 ### Input:
-
-- An integer `n`.
+- Two characters, each on a separate line.
 
 ### Output:
-
-- An integer representing the sum of the digits of `n`.
+- A string starting with the first and ending with the second input character, including all characters in between.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | -123 | 6 |
-| 2   | 1 | 1 |
-| 3   | 412098 | 24 |
+| No. | Inputs | Outputs    |
+| --- | ------ | ---------- |
+| 1   | A<br>F | ABCDEF     |
+| 2   | 0<br>9 | 0123456789 |
 
 ### Note:
+This exercise tests understanding of ASCII values and character ranges.
 
-The problem tests the ability to use loops and conditional statements to calculate the sum of the digits of an integer.
+## Exercise 17: Count Words in a String - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-
-## Exercise 40: Fibonacci Sequence - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-**Problem:** Write a program to obtain the Fibonacci sequence from 0 to `n`, where `n` is an integer. The Fibonacci sequence is a series of numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, .... Each subsequent number is found by adding the two numbers before it.
+**Problem:** Given a string consisting of words separated by spaces, determine how many words are in the string.
 
 ### Input:
-
-- An integer `n`.
+- A string.
 
 ### Output:
-
-- A sequence of numbers representing the Fibonacci sequence from 0 to `n`.
+- The number of words in the string.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 50 | 1 1 2 3 5 8 13 21 34 |
-| 2   | 100 | 1 1 2 3 5 8 13 21 34 55 89 |
-| 3   | 200 | 1 1 2 3 5 8 13 21 34 55 89 144 |
+| No. | Inputs                                                                      | Outputs |
+| --- | --------------------------------------------------------------------------- | ------- |
+| 1   | Events happened very rapidly with Francis Morgan that late spring morning    | 11      |
+| 2   | The quick brown fox jumps over the lazy dog                                  | 9       |
+| 3   | Hello, world!                                                               | 2       |
+| 4   | This is a test                                                              | 4       |
 
 ### Note:
+Focuses on splitting strings and counting elements.
 
-The problem tests the ability to use loops and conditional statements to print a sequence of numbers.
+## Exercise 18: Multiply Digits in Sequence - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-## Exercise 41: Fibonacci Sequence Number - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to obtain the Fibonacci sequence number. The Fibonacci sequence is a series of numbers 0, 1, 1, 2, 3, 5, 8, 13, 21, .... Each subsequent number is found by adding the two numbers before it.
+**Problem:** Given a sequence of digits in the form p1*p2*...*pn, compute the product.
 
 ### Input:
-
-- An integer `n`.
+- A string representing a sequence of digits separated by '*'.
 
 ### Output:
-
-- An integer representing the `n`-th number in the Fibonacci sequence.
+- The result of multiplying all the digits.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 9 | 34 |
-| 2   | 3 | 2 |
-| 3   | 5 | 5 |
+| 1   | 2*5*7  | 70      |
+| 2   | 3*4*6  | 72      |
+| 3   | 1*9*8  | 72      |
+| 4   | 2*3  | 6       |
+| 5   | 4*5*6*7*8  | 6720      |
+| 6   | 9*9*9*9*9*9*9  | 531441      |
+
 
 ### Note:
+Tests arithmetic operations on strings without using direct numeric operations.
 
-The problem tests the ability to use loops and conditional statements to print a sequence of numbers.
+## Exercise 19: First Decimal Digit - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-
-## Exercise 42: Greater Than Next Element - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine how many elements in a sequence are greater than the next element. The sequence consists of integers and ends with the number 0. The program should take into account that the sequence contains at least two numbers.
+**Problem:** Given a positive real number, print the first digit to the right of the decimal point.
 
 ### Input:
-
-- A sequence of integers that ends with the number 0.
+- A real number.
 
 ### Output:
-
-- An integer representing the number of elements in the sequence that are greater than the next element.
+- The first digit after the decimal point.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 2<br>9<br>1<br>4<br>3<br>0 | 2 |
-| 2   | 3<br>1<br>2<br>3<br>4<br>0 | 0 |
-| 3   | 5<br>1<br>2<br>3<br>4<br>5<br>0 | 1 |
+| No. | Inputs  | Outputs |
+| --- | ------- | ------- |
+| 1   | 1.79    | 7       |
+| 2   | 100.89  | 8       |
+| 3   | 6.045   | 0       |
+| 4   | 3.14159 | 4       |
+| 5   | 0.5     | 5       |
 
 ### Note:
+This problem tests string manipulation and accessing specific character positions.
 
-The problem tests the ability to use loops and conditional statements to count the number of occurrences of a specific value.
+## Exercise 20: Sum of Single Digit Numbers - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-
-## Exercise 43: Second Largest Element - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine the value of the second largest element in a sequence. The sequence consists of different natural numbers and ends with the number 0. The program should take into account that the sequence contains at least two numbers.
+**Problem:** Given a string of single-digit numbers without spaces, write a program to compute their sum.
 
 ### Input:
-
-- A sequence of integers that ends with the number 0.
+- A string of digits.
 
 ### Output:
-
-- An integer representing the value of the second largest element in the sequence.
+- The sum of the digits.
 
 ### Examples:
-
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 1<br>4<br>3<br>2<br>0 | 3 |
-| 2   | 3<br>1<br>2<br>3<br>4<br>0 | 3 |
-| 3   | 5<br>1<br>2<br>3<br>4<br>5<br>0 | 4 |
+| 1   | 1239   | 15      |
+| 2   | 88     | 16      |
+| 3   | 01     | 1       |
+| 4   | 456    | 15      |
+| 5   | 999    | 27      |
 
 ### Note:
+Focuses on character iteration and integer conversion.
 
-The problem tests the ability to use loops and conditional statements to calculate the value of the second largest element in a sequence.
+## Exercise 21: Convert Date Format - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-
-## Exercise 44: Index of Largest Element - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine the index of the largest element in a sequence. The sequence consists of natural numbers and ends with the number `0`. The program should take into account that the sequence contains at least two numbers.
+**Problem:** Read a user-input string containing a date in the form mm/dd/yyyy and print the date in the format Month Day, Year.
 
 ### Input:
-
-- A sequence of integers that ends with the number `0`.
+- A string representing a date.
 
 ### Output:
-
-- An integer representing the index of the largest element in the sequence.
+- The date in the format "Month Day, Year".
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 4<br>2<br>6<br>9<br>5<br>0 | 3 |
-| 2   | 3<br>1<br>2<br>3<br>4<br>0 | 4 |
-| 3   | 5<br>1<br>2<br>3<br>4<br>5<br>0 | 4 |
+| No. | Inputs     | Outputs                |
+| --- | ---------- | ---------------------- |
+| 1   | 12/29/2022 | December 29, 2022      |
+| 2   | 03/04/2025 | March 04, 2025         |
+| 3   | 06/15/2030 | June 15, 2030          |
+| 4   | 09/01/2023 | September 01, 2023     |
 
 ### Note:
+Tests string manipulation and understanding of date formats.
 
-The problem tests the ability to use loops and conditional statements to calculate the index of the largest element in a sequence.
+## Exercise 22: Check Palindrome - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-## Exercise 45: Sign Changes - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine how many times the sign changes in a sequence. The sequence consists of non-zero integers and ends with the number `0`. The program should take into account that the sequence contains at least two numbers.
+**Problem:** Enter a string. Remove all spaces from it and then determine if it is a palindrome.
 
 ### Input:
-
-- A sequence of integers that ends with the number `0`.
+- A string.
 
 ### Output:
-
-- An integer representing the number of times the sign changes in the sequence.
+- "Yes" if the string is a palindrome, "No" otherwise.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | -5<br>-3<br>10<br>6<br>-4<br>7<br>-1<br>0 | 4 |
-| 2   | 3<br>1<br>2<br>3<br>4<br>0 | 0 |
-| 3   | 5<br>1<br>2<br>3<br>4<br>5<br>0 | 0 |
+| No. | Inputs                                           | Outputs |
+| --- | ------------------------------------------------ | ------- |
+| 1   | 123          621                                 | No      |
+| 2   | Never     odd   or        even                   | Yes     |
+| 3   | A man, a plan, a canal, Panama                   | Yes     |
+| 4   | Racecar                                         | Yes     |
+| 5   | Hello world                                     | No      |
 
 ### Note:
+Tests string manipulation and palindrome checking.
 
-The problem tests the ability to use loops and conditional statements to count the number of occurrences of a specific value.
+## Exercise 23: Convert to Morse Code - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-## Exercise 46: Position of a Digit - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
- 
-**Problem:** Write a program to determine the position of a given digit `d` in a natural number `n`, counting from the end of the number. If there is no such digit, the answer should be the number `0`; if there are several such digits in the number, the position of the rightmost one should be determined.
+**Problem:** Write a program that converts a user-entered string into Morse code. Use an online Morse code table for reference.
 
 ### Input:
-
-- A natural number `n`.
-- A digit `d`.
+- A string.
 
 ### Output:
-
-- An integer representing the position of the rightmost occurrence of the digit `d` in the number `n`.
+- The string translated into Morse code.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1233572<br>3 | 4 |
-| 2   | 123456789<br>5 | 5 |
-| 3   | 123456789<br>0 | 0 |
+| No. | Inputs | Outputs                   |
+| --- | ------ | ------------------------- |
+| 1   | W      | .--                       |
+| 2   | 9      | ----.                     |
+| 3   | ,      | --..--                    |
+| 4   | Python | .--.-.--....----.         |
+| 5   | :)     | ---...-.--.-              |
 
 ### Note:
+Focuses on string manipulation and applying encoding schemes.
 
-The problem tests the ability to use loops and conditional statements to calculate the position of a digit in a number.
+## Exercise 24: Letter Case Frequency - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
 
-## Exercise 47: Palindromes - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine the number of palindromes that do not exceed `n`, where `n` is an integer entered by the user.
+**Problem:** Write a program to determine the percentage of uppercase and lowercase letters in a string.
 
 ### Input:
-
-- An integer `n` (1 ≤ n ≤ 100000).
+- A string which may contain spaces and punctuation.
 
 ### Output:
-
-- A sequence of numbers representing the palindromes that do not exceed `n`.
+- The percentage of lowercase letters followed by the percentage of uppercase letters in the string.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 50 | 1 2 3 4 5 6 7 8 9 11 22 33 44 |
-| 2   | 100 | 1 2 3 4 5 6 7 8 9 11 22 33 44 55 66 77 88 99 |
-| 3   | 200 | 1 2 3 4 5 6 7 8 9 11 22 33 44 55 66 77 88 99 101 111 121 131 141 151 161 171 181 191 |
-
-## Exercise 48: Number of Palindromes - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine the number of palindromes that do not exceed `n`, where `n` is an integer entered by the user.
-
-### Input:
-
-- An integer `n` (1 ≤ n ≤ 100000).
-
-### Output:
-
-- A number representing the number of palindromes that do not exceed `n`.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 50 | 13 |
-| 2   | 100 | 18 |
-| 3   | 200 | 28 |
+| No. | Inputs        | Outputs     |
+| --- | ------------- | ----------- |
+| 1   | Hello, Guido! | 61.54<br>15.38 |
+| 2   | This is a Test | 57.14<br>28.57 |
+| 3   | PYTHON123     | 0.0<br>100.0 |
+| 4   | AbCdEfG       | 42.86<br>57.14 |
+| 5   | 1234567890    | 0.0<br>0.0 |
 
 ### Note:
+This exercise tests string analysis and percentage calculation skills.
 
-The problem tests the ability to use loops and conditional statements to calculate the number of palindromes that do not exceed a certain value.
+## Exercise 25: Windows Path Decomposition - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
 
-## Exercise 49: Palindromes in an Interval - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Two four-digit numbers `a` and `b` are entered. Print all four-digit numbers in the interval from `a` to `b` that are palindromes (read the same from left to right and from right to left).
-
+**Problem:** Given a Windows file path, decompose it into its constituent parts without using any modules.
 
 ### Input:
-
-- Two four-digit numbers `a` and `b`.
+- A string representing a Windows file path.
 
 ### Output:
-
-- A sequence of four-digit numbers in the interval from `a` to `b` that are palindromes.
+- The drive letter and each directory name as separate lines.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1400<br>2200 | 1441 1551 1661 1771 1881 1991 2002 2112 |
-| 2   | 1000<br>2000 | 1001 1111 1221 1331 1441 1551 1661 1771 1881 1991 |
-| 3   | 2000<br>3000 | 2002 2112 2222 2332 2442 2552 2662 2772 2882 2992 |
+| No. | Inputs               | Outputs     |
+| --- | -------------------- | ----------- |
+| 1   | C:\\Python36\\python.exe | C:<br>Python36<br>python.exe |
+| 2   | D:\\Documents\\file.txt | D:<br>Documents<br>file.txt |
+| 3   | E:\\Programs\\program.exe | E:<br>Programs<br>program.exe |
 
 ### Note:
+Tests string splitting and manipulation skills with specific focus on handling escape characters.
 
-The problem tests the ability to use loops and conditional statements to calculate the number of palindromes that do not exceed a certain value.
+## Exercise 26: Multiplication Table - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
 
-
-## Exercise 50: Number of Palindromes - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Write a program to determine the number of palindromes that do not exceed `n`, where `n` is an integer entered by the user.
+**Problem:** Print a part of the multiplication table for numbers in the range [a, b] across [c, d].
 
 ### Input:
-
-- An integer `n` (1 ≤ n ≤ 100000).
+- Four integers a, b, c, and d defining the ranges.
 
 ### Output:
-
-- A number representing the number of palindromes that do not exceed `n`.
+- A formatted multiplication table.
 
 ### Examples:
 
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
-| 1   | 10 | 9 |
-| 2   | 50 | 13 |
-| 3   | 100 | 18 |
-| 4   | 200 | 27 |
+| 1   | 1<br>4<br>2<br>5 | Output 1         |
+
+### Output for Input Example 1
+
+<pre>	2	3	4	5
+1	2	3	4	5
+2	4	6	8	10
+3	6	9	12	15
+4	8	12	16	20</pre>
+
+
 
 ### Note:
+Focuses on loops for generating and formatting a matrix-like output.
 
-The problem tests the ability to use loops and conditional statements to calculate the number of palindromes that do not exceed a certain value.
+## Exercise 27: Run-Length Encoding - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
 
-## Exercise 51: Three Identical Digits - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Two four-digit numbers `a` and `b` are entered. Print all four-digit numbers in the interval from `a` to `b` that contain only three identical digits.
+**Problem:** Encode a string by replacing groups of identical characters with the character followed by its count.
 
 ### Input:
-
-- Two four-digit numbers `a` and `b`.
+- A string.
 
 ### Output:
-
-- A sequence of four-digit numbers in the interval from `a` to `b` that contain only three identical digits.
+- The encoded string.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1400<br>1600 | 1411 1444 1511 1555 |
-| 2   | 1000<br>2000 | 1111 1222 1333 1444 1555 1666 1777 1888 1999 |
-| 3   | 2000<br>3000 | 2002 2111 2222 2333 2444 2555 2666 2777 2888 2999 |
-
-
-
-## Exercise 52: Odd Numbers - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Two numbers `a` and `b` are entered. Print all odd numbers from the interval from `a` to `b` (b ≤ a). Write a program without using a branching instruction.
-
-### Input:
-
-- Two integers `a` and `b` (a ≥ b).
-
-### Output:
-
-- A sequence of odd numbers from the interval from `a` to `b`.
-
-### Examples:
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 10<br>1 | 9 7 5 3 1 |
-| 2   | 20<br>1 | 19 17 15 13 11 9 7 5 3 1 |
-| 3   | 30<br>1 | 29 27 25 23 21 19 17 15 13 11 9 7 5 3 1 |
+| No. | Inputs      | Outputs   |
+| --- | ----------- | --------- |
+| 1   | aaaabbbcaa  | a4b3c1a2  |
+| 2   | abc         | a1b1c1    |
+| 3   | Hello       | H1e1l2o1  |
+| 4   | abcdabcd    | a1b1c1d1a1b1c1d1 |
+| 5   | xyzxyzxyz   | x1y1z1x1y1z1x1y1z1 |
 
 ### Note:
+Tests string iteration and conditional counting for encoding patterns.
 
-The problem tests the ability to use loops to print a sequence of numbers.
+## Exercise 28: Word Count in a String - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
 
-## Exercise 53: Even Numbers - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-**Problem:** Two numbers `a` and `b` are entered. Print all even numbers from the interval from `a` to `b` (a ≤ b). Write a program without using a branching instruction.
+**Problem:** Count the number of words in a string, where a word is a sequence of consecutive English letters.
 
 ### Input:
-
-- Two integers `a` and `b` (a ≤ b).
+- A string.
 
 ### Output:
-
-- A sequence of even numbers from the interval from `a` to `b`.
+- The number of words in the string.
 
 ### Examples:
 
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 1<br>20 | 2 4 6 8 10 12 14 16 18 20 |
-| 2   | 1<br>30 | 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 |
-| 3   | 1<br>40 | 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 |
+| No. | Inputs                                                         | Outputs |
+| --- | -------------------------------------------------------------- | ------- |
+| 1   | Do you play any sports? Yes, I like to play basketball.        | 10      |
+| 2   | How many siblings do you have? I have two sisters and one brother. | 9      |
+| 3   | What is your favorite color? My favorite color is blue.        | 7       |
 
 ### Note:
+Challenges string processing and word counting without using lists.
 
-The problem tests the ability to use loops to print a sequence of numbers.
+## Exercise 29: Caesar Cipher - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
+
+**Problem:** Encrypt a string using the Caesar cipher, shifting letters by a specified number of places in the alphabet.
+
+### Input:
+- An integer for the shift amount and a string to encrypt.
+
+### Output:
+- The encrypted string.
+
+### Examples:
+
+
+| No. | Inputs         | Outputs |
+| --- | -------------- | ------- |
+| 2   | 26<br>abc      | abc     |
+| 3   | 1<br>Python    | Qzuipo  |
+| 4   | IX             | 9       |
+| 5   | LXXVIII        | 78      |
+| 6   | CD             | 400     |
+
+### Note:
+Tests understanding of character manipulation within strings and conditional wrapping for alphabets.
+
+## Exercise 30: Roman to Integer Conversion - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
+
+**Problem:** Convert a Roman numeral to an integer.
+
+### Input:
+- A string representing a Roman numeral.
+
+### Output:
+- The integer value of the Roman numeral.
+
+### Examples:
+
+| No. | Inputs   | Outputs |
+| --- | -------- | ------- |
+| 1   | MMMCMXCIX | 3999    |
+| 2   | IV        | 4       |
+| 3   | XXI       | 21      |
+| 4   | XLV       | 45      |
+| 5   | CXXV      | 125     |
+
+### Note:
+Challenges understanding and implementing the conversion of Roman numerals to integers, focusing on string processing and pattern recognition.
+
 
 
 
@@ -1300,13 +710,13 @@ The problem tests the ability to use loops to print a sequence of numbers.
 The exercises provided range from understanding conditional statements to implementing complex branching logic. Here's a summary of the exercises ordered by difficulty, starting with the easiest and moving to more challenging problems.
 
 ## Easy 😊
-Total: 14
+Total: 11
 
 ## Medium 🔥
-Total: 19
+Total: 12
 
 ## Hard 🥵
-Total: 18
+Total: 7
 
 Each exercise is designed to challenge different aspects of problem-solving, from simple arithmetic to complex logical reasoning. The estimated completion time for the exercises ranges from 5 minutes for the simplest tasks to 25 minutes for the most complex ones. This gives an average expected time of approximately 10-15 minutes per exercise, depending on the student's prior knowledge and experience.
 
