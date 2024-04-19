@@ -142,8 +142,10 @@ print(starts_with_prefix)
 ```python
 n = input("Enter the number: ")
 
-if len(n) > 1:
+if len(n) > 2:
     reversed_number = n[-1] + n[1:-1] + n[0]
+elif len(2) == 2:
+    reversed_number = n[-1] + n[0]
 else:
     reversed_number = n
 
