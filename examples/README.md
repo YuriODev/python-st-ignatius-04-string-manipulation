@@ -834,51 +834,39 @@ print(count)
 ```
 </details>
 
-## Example 23: Least Common Multiple Calculation
+## Example 24: Format Number with Commas
 
-**Problem:** Write a program that helps to find the least common multiple (LCM) of two numbers. The program should read two positive integers `a` and `b` (each number is entered on a separate line) and print the smallest number that is divisible by both of these numbers without a remainder.
-The formula to calculate the Least Common Multiple (LCM) of two numbers `a` and `b` is given by:
+**Problem:** The user enters a string of digits without spaces. Write a program that "breaks" this number into groups of three digits from right to left using commas. If the number contains fewer than three digits, it should be displayed without changes.
 
-$$\text{LCM}(a, b) = \frac{|ab|}{\text{GCD}(a, b)},$$
+| No. | Inputs   | Outputs     |
+| --- | -------- | ----------- |
+| 1   | 4567     | 4,567       |
+| 2   | 123      | 123         |
+| 3   | 2348906  | 2,348,906   |
 
-where $\text{GCD}(a, b)$ is the greatest common divisor of numbers `a` and `b`.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 4<br>6  | 12      |
-| 2   | 15<br>25 | 75      |
-| 3   | 1<br>1   | 1       |
-| 4   | 5<br>8   | 40      |
+**Problem:** Write a program that formats a string of digits by grouping every three digits with commas from right to left.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-a = int(input("Enter the first number: "))
-b = int(input("Enter the second number: "))
+# Input string of digits
+number = input("Enter a string of digits: ")
 
-x = a
-y = b
+# Start from the end and insert commas every three digits
+formatted_number = ''
+count = 0
 
-product = a * b
+# Reverse iterate over the number string
+for i in range(len(number) - 1, -1, -1):
+    formatted_number = number[i] + formatted_number
+    count += 1
+    if count == 3 and i != 0:  # Avoid adding a comma at the start
+        formatted_number = ',' + formatted_number
+        count = 0
 
-# Solution 1
-while b:
-    a, b = b, a % b
-
-gcd = a
-lcm = product // gcd
-print(lcm)
-
-# Solution 2
-while y != 0:
-    temp = y
-    y = x % y
-    x = temp
-
-gcd = x
-lcm = product // gcd
-print(lcm)
+# Print the formatted number
+print(formatted_number)
 ```
 
 </details>
