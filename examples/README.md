@@ -453,17 +453,6 @@ else:
 ```
 </details>
 
-При заданому користувачем значенні цілого числа n ≥ 2 обчислити суму 1 x 2 + 2 x 3 + ... + (n - 1) x n. Відповідь виведіть у вигляді обчисленого виразу і його значення в точності, як показано у вихідних даних.
-
-Вхідні дані:
-
-2
-4
-Вихідні дані:
-
-1*2=2
-1*2+2*3+3*4=20
-
 ## Problem 15: Sum of Sequence Elements Calculation
 
 **Problem:** User defines a number `n` such as `n >= 2`. Calculate the sum of the following sequence: `1 x 2 + 2 x 3 + ... + (n - 1) x n`. Print the result in the format shown in the output data.
@@ -619,42 +608,44 @@ else:
 
 </details>
 
-Дано рядок нулів та одиниць. Напишіть програму для знаходження найдовшої неперервної послідовності нулів у рядку.
+## Problem 19: Longest Sequence of Zeros
 
-Вхідні дані:
+**Problem:** Given a string of zeros and ones, write a program to find the longest continuous sequence of zeros in the string.
 
-1001
-100001001010
-1000001
-Вихідні дані:
+| No. | Inputs         | Outputs |
+| --- | -------------- | ------- |
+| 1   | 1001           | 2       |
+| 2   | 100001001010   | 4       |
+| 3   | 1000001        | 5       |
 
-2
-4
-5
-
-## Problem 19: Power Calculation
-
-**Problem:** Given integers `a` and `b`. Calculate `a` to power of `b` without using the exponentiation operation.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 2<br>3  | 8       |
-| 2   | 3<br>3  | 27      |
-| 3   | 5<br>2  | 25      |
+**Problem:** Determine the longest unbroken chain of zeros within a binary string.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-a = int(input("Enter the base: "))
-b = int(input("Enter the exponent: "))
+# Take input for the binary string
+binary_string = input("Enter the binary string: ")
 
-result = 1
+# Initialize variables to track the longest zero sequence and current zero count
+longest_sequence = 0
+current_count = 0
 
-for _ in range(b):
-    result *= a
+# Iterate over each character in the string
+for char in binary_string:
+    if char == '0':
+        current_count += 1
+    else:
+        if current_count > longest_sequence:
+            longest_sequence = current_count
+        current_count = 0
 
-print(result)
+# Check the last sequence in case the string ends with '0'
+if current_count > longest_sequence:
+    longest_sequence = current_count
+
+# Print the longest sequence of zeros
+print(longest_sequence)
 ```
 </details>
 
