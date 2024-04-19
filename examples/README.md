@@ -735,52 +735,42 @@ print("True" if is_balanced else "False")
 
 </details>
 
-Дано рядок, що складається з n цифр (тобто одноцифрових чисел), між якими стоїть n-1 знаків операцій, кожна з яких може бути або +, або -. Обчисліть значення цього виразу. Програма має надрукувати результат обчислення цього виразу.
+## Example 22: Evaluate Expression
 
-Вхідні дані:
+**Problem:** Given a string that consists of n digits (i.e., single-digit numbers), separated by n-1 operation signs which can be either '+' or '-', calculate the value of this expression. The program should print the result of evaluating this expression.
 
-5-3+1
-6+3-2
-Вихідні дані:
+| No. | Inputs    | Outputs |
+| --- | --------- | ------- |
+| 1   | 5-3+1     | 3       |
+| 2   | 6+3-2     | 7       |
 
-3
-7
-
-## Problem 22: Automorphic Number Determination
-
-**Problem:** Given a natural number `n`. Determine if it is an automorphic number. Note. An automorphic number is a number whose square is equal to the last digits of the square of this number: 5 - 25, 6 - 36, 25 - 625.
-
-| No. | Inputs | Outputs |
-| --- | ------ | ------- |
-| 1   | 9376   | True    |
-| 2   | 26     | False   |
-| 3   | 25     | True    |
-| 4   | 6      | True    |
-| 5   | 5      | True    |
-| 6   | 1      | True    |
-| 7   | 76     | True    |
+**Problem:** Write a program to evaluate expressions consisting of single-digit numbers separated by '+' or '-' signs.
 
 <details open>
 <summary><b>Python Solution</b></summary>
 
 ```python
-n = int(input("Enter the number: "))
-temp_number = n
+# Take input for the expression
+expression = input("Enter the expression: ")
 
-square = n ** 2
-digit_count = 0
+# Initialize the result with the first number (assumes expression starts with a number)
+result = int(expression[0])
 
-while temp_number > 0:
-    temp_number //= 10
-    digit_count += 1
+# Loop through the expression starting from the first operator
+i = 1
+while i < len(expression):
+    operator = expression[i]
+    digit = int(expression[i+1])
+    
+    if operator == '+':
+        result += digit
+    elif operator == '-':
+        result -= digit
+    
+    i += 2  # Move to the next operator
 
-power = 10 ** digit_count
-
-if square % power == n:
-    print(True)
-else:
-    print(False)
-
+# Print the final result
+print(result)
 ```
 
 </details>
