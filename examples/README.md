@@ -333,7 +333,7 @@ for i in range(start, end + 1):
 </details>
 
 
-## Problem 11: Count Words in a String
+## Example 11: Count Words in a String
 
 
 **Problem:** Given a string of words separated by spaces. Determine the number of words in the string.
@@ -366,7 +366,7 @@ else:
 </details>
 
 
-## Problem 12: String Len
+## Example 12: String Len
 
 **Problem:** Write a program to calculate the length of a string without using the `len()` function. 
 
@@ -394,7 +394,7 @@ print(length)
 </details>
 
 
-## Problem 13: Digits and Characters Count
+## Example 13: Digits and Characters Count
 
 **Problem:** Write a program that receives a string and calculates the number of digits and letters in it.
 
@@ -427,7 +427,7 @@ print(f"Digits {digit_count}")
 </details>
 
 
-## Problem 14: Vowel and Consonant Check
+## Example 14: Vowel and Consonant Check
 
 **Problem:** Write a program to check if the entered letter is a vowel or a consonant.
 
@@ -453,7 +453,7 @@ else:
 ```
 </details>
 
-## Problem 15: Sum of Sequence Elements Calculation
+## Example 15: Sum of Sequence Elements Calculation
 
 **Problem:** User defines a number `n` such as `n >= 2`. Calculate the sum of the following sequence: `1 x 2 + 2 x 3 + ... + (n - 1) x n`. Print the result in the format shown in the output data.
 
@@ -491,7 +491,7 @@ else:
 
 
 
-## Problem 16: Uppercase, Lowercase, and Space Count
+## Example 16: Uppercase, Lowercase, and Space Count
 
 **Problem:** Write a program that reads a string entered by the user and determines the number of uppercase letters, lowercase letters, and spaces in it.
 
@@ -526,7 +526,7 @@ print(f"Upper {upper_count}")
 </details>
 
 
-## Problem 17: Remove Duplicate Characters
+## Example 17: Remove Duplicate Characters
 
 **Problem:** Enter a string. Remove all duplicate characters and spaces from it.
 
@@ -558,7 +558,7 @@ print(unique_chars)
 </details>
 
 
-## Problem 18: Find and Replace Substring
+## Example 18: Find and Replace Substring
 
 **Problem:** Given a string, find a specified substring and replace it with a new one. The user enters the string, the substring to replace, and the new string. Consider the case of replacing all substrings. Also, consider the case when the substring to be replaced is not present (print is impossible).
 
@@ -608,7 +608,7 @@ else:
 
 </details>
 
-## Problem 19: Longest Sequence of Zeros
+## Example 19: Longest Sequence of Zeros
 
 **Problem:** Given a string of zeros and ones, write a program to find the longest continuous sequence of zeros in the string.
 
@@ -775,23 +775,61 @@ print(result)
 
 </details>
 
-На вхід програми подається два рядка A і B, що складаються з малих букв англійського алфавіту. Виведіть кількість входжень рядка B в рядок A.
+## Example 23: Count String Occurrences
 
-Вхідні дані:
+**Problem:** Two strings A and B, consisting of lowercase English letters, are given as input. Output the number of occurrences of string B in string A.
 
-aaaa
-a
-ababada
-abc
-abababa
-aba
-Вихідні дані:
+| No. | Inputs                    | Outputs |
+| --- | ------------------------- | ------- |
+| 1   | aaaa<br>a                 | 4       |
+| 2   | ababada<br>abc            | 0       |
+| 3   | abababa<br>aba            | 3       |
 
-4
-0
-3
+**Problem:** Write a program that prints the number of times string B occurs in string A using two different approaches.
 
-## Problem 23: Least Common Multiple Calculation
+<details open>
+<summary><b>Solution One - Non `find` Method Approach</b></summary>
+
+```python
+# Input string A
+a = input("Enter string A: ")
+# Input string B
+b = input("Enter string B: ")
+
+count = 0
+# Use a loop to manually check for occurrences
+for i in range(len(a) - len(b) + 1):  # Only go up to where B can fully fit in A
+    if a[i:i+len(b)] == b:  # Check if the substring of A equals B
+        count += 1
+
+# Print the number of occurrences
+print(count)
+</details>
+<details open>
+<summary><b>Solution Two - Using `find` Method</b></summary>
+# Input string A
+a = input("Enter string A: ")
+# Input string B
+b = input("Enter string B: ")
+
+# Initialize the count and the starting index
+count = 0
+start = 0
+
+# Loop to find occurrences of string B in string A
+while True:
+    start = a.find(b, start)  # Find the next occurrence of B starting from index 'start'
+    if start == -1:  # No more occurrences found
+        break
+    count += 1
+    start += 1  # Move start index to the next character after the current match
+
+# Print the number of occurrences
+print(count)
+</details>
+```
+
+## Example 23: Least Common Multiple Calculation
 
 **Problem:** Write a program that helps to find the least common multiple (LCM) of two numbers. The program should read two positive integers `a` and `b` (each number is entered on a separate line) and print the smallest number that is divisible by both of these numbers without a remainder.
 The formula to calculate the Least Common Multiple (LCM) of two numbers `a` and `b` is given by:
@@ -853,7 +891,7 @@ print(lcm)
 123
 2,348,906
 
-## Problem 24: Monotonous Sequence Printing
+## Example 24: Monotonous Sequence Printing
 
 **Problem:** Given a natural number `n`. Print the first `n` members of the sequence. The sequence is a monotonous sequence in which each natural number `k` occurs exactly `k` times: 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, ....
 
@@ -895,7 +933,7 @@ Njzxwxgd Bpihjbdid, rgtpidg du iwt Gjqn egdvgpbbxcv apcvjpvt.
 
 Yukihiro Matsumoto, creator of the Ruby programming language.
 
-## Problem 25: Fibonacci Number Determination
+## Example 25: Fibonacci Number Determination
 
 **Problem:** Given a natural number `n`. Determine which Fibonacci number it is. If `n` is not a Fibonacci number, print the value `-1`. The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1. The sequence goes: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, and so on.
 
@@ -944,7 +982,7 @@ He 2
 is 2
 Tom 3
 
-## Problem 26: Sequence Element Comparison
+## Example 26: Sequence Element Comparison
 
 **Problem:** Given a sequence of natural numbers that ends with the number `0`. Determine how many elements of this sequence are greater than the previous element.
 
@@ -985,7 +1023,7 @@ aabcccddffffffffff
 3ab4c2CaB
 2ab3c2d10f
 
-## Problem 27:
+## Example 27:
 
 **Problem:** Given a sequence of natural numbers that ends with the number `0`. Determine how many elements of this sequence are equal to its largest element.
 
@@ -1030,7 +1068,7 @@ print(max_count)
 13
 10
 
-## Problem 28: Sequence Element Comparison
+## Example 28: Sequence Element Comparison
 
 **Problem:** Given a sequence of natural numbers that ends with the number `0`. Determine the largest number of elements in this sequence that go one after the other and are equal to each other (i.e., the longest consecutive sequence of identical elements). Also, print the element that is repeated most consecutively. If there are multiple elements with the same maximum consecutive count, the task does not specify which one to print, so we'll choose to print any one of them.
 
@@ -1090,7 +1128,7 @@ Project Gutenberg EBook of The jungle book, by Rudyard Kipling
 EO
 6
 
-## Problem 29: Divisibility Graphical Representation
+## Example 29: Divisibility Graphical Representation
 
 **Problem:** Write a program to graphically represent the divisibility of numbers from `1` to `n` (the value of `n` is entered from the keyboard). In each line, print the next number and as many `+` characters as there are divisors of this number.
 
@@ -1136,7 +1174,7 @@ No
 Yes
 No
 
-## Problem 30: Number Reversal
+## Example 30: Number Reversal
 
 **Problem:** Given a natural number `n`. Print the number that is the reverse of the order of its digits.
 
