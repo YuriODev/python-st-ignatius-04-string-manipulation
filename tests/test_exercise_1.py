@@ -25,9 +25,16 @@ class TestExercise1(CustomTestCase):
 
         self.assertNotUseSelfDefinedFunctions()
 
+    def provided_soltuion_usage(self):
+        """
+        The program should not use the provided solution to solve the exercise.
+        """
+
+        self.assertNotUsingProvidedSolution()
+
     def test_case_1(self):
         """
-        Description of the test case 1
+        The input is 125, the output should be 125125
         """
         inputs = ['125']
         output = self.run_exercise(inputs)
@@ -37,7 +44,7 @@ class TestExercise1(CustomTestCase):
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        The input is 6, the output should be 66
         """
         inputs = ['6']
         output = self.run_exercise(inputs)
@@ -47,7 +54,7 @@ class TestExercise1(CustomTestCase):
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        The input is 1, the output should be 11
         """
         inputs = ['1']
         output = self.run_exercise(inputs)
@@ -57,17 +64,17 @@ class TestExercise1(CustomTestCase):
 
     def test_case_4(self):
         """
-        Description of the test case 3
+        The input is 999, the output should be 999999
         """
         inputs = ['999']
         output = self.run_exercise(inputs)
-        expected_output = "999"
+        expected_output = "999999"
         self.assertInCustom(expected=expected_output,
                             actual=output, input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 3
+        The input is 10, the output should be 1010
         """
         inputs = ['10']
         output = self.run_exercise(inputs)
