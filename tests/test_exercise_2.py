@@ -1,6 +1,6 @@
-
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
+
 
 class TestExercise2(CustomTestCase):
 
@@ -8,64 +8,80 @@ class TestExercise2(CustomTestCase):
         """
         The program should not use lists to solve the exercise.
         """
+
         self.assertNotUsesList()
 
     def test_dict_usage(self):
         """
         The program should not use dictionaries to solve the exercise.
         """
+
         self.assertNoUsesDictionary()
 
     def test_function_usage(self):
         """
         The program should not use functions to solve the exercise.
         """
+
         self.assertNotUseSelfDefinedFunctions()
+
+    def provided_soltuion_usage(self):
+        """
+        The program should not use the provided solution to solve the exercise.
+        """
+
+        self.assertNotUsingProvidedSolution()
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        The input is 'A scandal in Bohemia', the output should be 'A Scandal In Bohemia'
         """
-        inputs = None
+        inputs = ['A scandal in Bohemia']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'A Scandal In Bohemia'
+        self.assertInCustom(expected=expected_output,
+                            actual=output, input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        The input is 'The adventure of the Blue Carbuncle', the output should be 'The Adventure Of The Blue Carbuncle'
         """
-        inputs = None
+        inputs = ['The adventure of the Blue Carbuncle']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'The Adventure Of The Blue Carbuncle'
+        self.assertInCustom(expected=expected_output,
+                            actual=output, input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        The input is 'The Boscombe valley mystery', the output should be 'The Boscombe Valley Mystery'
         """
-        inputs = None
+        inputs = ['The Boscombe valley mystery']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'The Boscombe Valley Mystery'
+        self.assertInCustom(expected=expected_output,
+                            actual=output, input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        The input is 'The Hound of the Baskervilles', the output should be 'The Hound Of The Baskervilles'
         """
-        inputs = None
+        inputs = ['The Hound of the Baskervilles']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'The Hound Of The Baskervilles'
+        self.assertInCustom(expected=expected_output,
+                            actual=output, input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        The input is 'The Sign of Four', the output should be 'The Sign Of Four'
         """
-        inputs = None
+        inputs = ['The Sign of Four']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'The Sign Of Four'
+        self.assertInCustom(expected=expected_output,
+                            actual=output, input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
