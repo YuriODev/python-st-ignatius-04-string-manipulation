@@ -150,3 +150,12 @@ class TestOutputFormatter:
         title = "Self-defined Functions Error"
         content = "The solution must not use self-defined functions."
         return TestOutputFormatter.generate_message(title, content)
+
+    @staticmethod
+    def generate_provided_solution_message():
+        """
+        Generates a custom message in a table format about the misuse of the provided solution.
+        """
+        title = "Provided Solution Error"
+        content = "The solution must not use the provided solution."
+        return TestOutputFormatter.generate_message(title, content)
