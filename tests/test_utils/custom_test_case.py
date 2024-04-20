@@ -152,6 +152,28 @@ class CustomTestCase(unittest.TestCase):
             self_defined_functions_message = TestOutputFormatter.generate_self_defined_functions_message()
             raise AssertionError(self_defined_functions_message)
 
+    def assertNotUsingProvidedSolution(self):
+        """
+        Asserts that the solution is not the provided solution.
+        """
+        try:
+            self.assertFalse(self.check_for_provided_solution())
+        except AssertionError:
+            provided_solution_message = TestOutputFormatter.generate_provided_solution_message()
+            raise AssertionError(provided_solution_message)
+
+    def check_for_provided_solution(self):
+        """
+        Checks if the student's solution from exercises/exercise_{i}.py is 
+        the same as the provided solution from solutions/solution_{i}.py.
+        """
+        exercise_number = self.exercise_file_name.split('_')[1].split('.')[0]
+        solution_file_name = f"solution_{exercise_number}.py"
+        solution_file_path = self.get_exercise_path(solution_file_name)
+        with open(solution_file_path, 'r') as file:
+            solution_content = file.read()
+        return self.file_content == solution_content
+
     def check_for_self_defined_functions(self):
         """
         Checks if the solution file uses self-defined functions.
