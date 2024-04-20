@@ -29,8 +29,8 @@ Here are the exercises for the Python Basics module. These exercises are designe
 | 1   | 125    | 125125  |
 | 2   | 6      | 66      |
 | 3   | 1      | 11      |
-| 4   | 999    | 29992   |
-| 5   | 0      | 202     |
+| 4   | 999    | 999999  |
+
 
 ### Note:
 The problem tests the ability to manipulate strings and integers to construct a new number.
