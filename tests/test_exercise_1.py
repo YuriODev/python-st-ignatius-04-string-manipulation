@@ -29,9 +29,9 @@ class TestExercise1(CustomTestCase):
         """
         Description of the test case 1
         """
-        inputs = None
+        inputs = ['125']
         output = self.run_exercise(inputs)
-        expected_output = "None"
+        expected_output = "125125"
         self.assertInCustom(expected=expected_output,
                             actual=output, input_value=inputs)
 
@@ -39,9 +39,9 @@ class TestExercise1(CustomTestCase):
         """
         Description of the test case 2
         """
-        inputs = None
+        inputs = ['6']
         output = self.run_exercise(inputs)
-        expected_output = "None"
+        expected_output = "66"
         self.assertInCustom(expected=expected_output,
                             actual=output, input_value=inputs)
 
@@ -49,9 +49,9 @@ class TestExercise1(CustomTestCase):
         """
         Description of the test case 3
         """
-        inputs = None
+        inputs = ['1']
         output = self.run_exercise(inputs)
-        expected_output = "None"
+        expected_output = "11"
         self.assertInCustom(expected=expected_output,
                             actual=output, input_value=inputs)
 
@@ -59,9 +59,9 @@ class TestExercise1(CustomTestCase):
         """
         Description of the test case 3
         """
-        inputs = None
+        inputs = ['999']
         output = self.run_exercise(inputs)
-        expected_output = "None"
+        expected_output = "999"
         self.assertInCustom(expected=expected_output,
                             actual=output, input_value=inputs)
 
@@ -69,9 +69,9 @@ class TestExercise1(CustomTestCase):
         """
         Description of the test case 3
         """
-        inputs = None
+        inputs = ['10']
         output = self.run_exercise(inputs)
-        expected_output = "None"
+        expected_output = "1010"
         self.assertInCustom(expected=expected_output,
                             actual=output, input_value=inputs)
 
