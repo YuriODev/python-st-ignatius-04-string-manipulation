@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise10(CustomTestCase):
 
     def test_list_usage(self):
@@ -21,51 +22,72 @@ class TestExercise10(CustomTestCase):
         The program should not use functions to solve the exercise.
         """
         self.assertNotUseSelfDefinedFunctions()
+# ### Input:
+# - A three-digit integer.
+
+# ### Output:
+# - The sum of the digits.
+
+# ### Examples:
+
+# | No. | Inputs | Outputs |
+# | --- | ------ | ------- |
+# | 1   | 179    | 17      |
+# | 2   | 246    | 12      |
+# | 3   | 503    | 8       |
+# | 4   | 888    | 24      |
+# | 5   | 999    | 27      |
+
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        The three-digit integer is 179.
         """
-        inputs = None
+        inputs = ['179']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '17'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        The three-digit integer is 246.
         """
-        inputs = None
+        inputs = ['246']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '12'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        The three-digit integer is 503.
         """
-        inputs = None
+        inputs = ['503']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '8'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        The three-digit integer is 888.
         """
-        inputs = None
+        inputs = ['888']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '24'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        The three-digit integer is 999.
         """
-        inputs = None
+        inputs = ['999']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '27'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
