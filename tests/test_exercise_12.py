@@ -2,6 +2,32 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
+def draw_penguins(n):
+    output = ""
+    for i in range(1, n + 1):
+        output += "   _~_        "
+    output += "\n"
+
+    for i in range(1, n + 1):
+        output += "  (o o)       "
+    output += "\n"
+
+    for i in range(1, n + 1):
+        output += " /  V  \\      "
+    output += "\n"
+
+    for i in range(1, n + 1):
+        output += f"/(  {i}  )\\     "
+    output += "\n"
+
+    for i in range(1, n + 1):
+        output += "  ^^ ^^       "
+    output += "\n"
+
+    return output
+
+
 class TestExercise12(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +50,54 @@ class TestExercise12(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        The program should return the correct output for Example 1.
         """
-        inputs = None
+        inputs = ['1']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = draw_penguins(1)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        The program should return the correct output for Example 2.
         """
-        inputs = None
+        inputs = ['2']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = draw_penguins(2)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        The program should return the correct output for Example 3.
         """
-        inputs = None
+        inputs = ['3']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = draw_penguins(3)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        The program should return the correct output for Example 4.
         """
-        inputs = None
+        inputs = ['4']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = draw_penguins(4)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        The program should return the correct output for Example 5.
         """
-        inputs = None
+        inputs = ['5']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = draw_penguins(5)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
