@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise13(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,56 @@ class TestExercise13(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        The program should return the correct output for Example 1.
         """
-        inputs = None
+        inputs = ['3+3=6']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '336'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        The program should return the correct output for Example 2.
         """
-        inputs = None
+        inputs = ['2 * 3 = 6']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '236'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
+    # Add more test cases for the remaining examples
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        The program should return the correct output for Example 3.
         """
-        inputs = None
+        inputs = ['abc123def456']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '123456'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        The program should return the correct output for Example 4.
         """
-        inputs = None
+        inputs = ['!@#$%^&*()']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = ''
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        The program should return the correct output for Example 5.
         """
-        inputs = None
+        inputs = ['9876543210']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '9876543210'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
