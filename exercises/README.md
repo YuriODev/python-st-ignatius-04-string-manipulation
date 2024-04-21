@@ -288,11 +288,13 @@ Focuses on string splitting and element access.
 
 ### Output for Input Example 1
 
-<pre>   _~_        _~_        _~_        _~_
+<pre>
+   _~_        _~_        _~_        _~_
   (o o)      (o o)      (o o)      (o o)
  /  V  \    /  V  \    /  V  \    /  V  \
 /(  1  )\  /(  2  )\  /(  3  )\  /(  4  )\
-  ^^ ^^      ^^ ^^      ^^ ^^      ^^ ^^</pre>
+  ^^ ^^      ^^ ^^      ^^ ^^      ^^ ^^
+</pre>
 
 ### Note:
 The problem tests the ability to use loops and string manipulation to construct a multi-line pattern output.
