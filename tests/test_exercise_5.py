@@ -73,5 +73,6 @@ class TestExercise5(CustomTestCase):
         self.assertInCustom(expected=expected_output, actual=output,
                             input_value=inputs)
 
+
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
