@@ -191,9 +191,9 @@ Focus on string replacement techniques for specific characters.
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
 | 1   | a<br>"Curiouser and curiouser!" cried Alice (she was so much surprised that for the moment she quite forgot how to speak good English). | "Curiouser And curiouser!" cried Alice (she wAs so much surprised thAt for the moment she quite forgot how to speAk good English). |
-| 2   | b<br>"The quick brown fox jumps over the lazy dog." | "The quick brown fox jumps over the lAzy dog." |
+| 2   | a<br>"The quick brown fox jumps over the lazy dog." | "The quick brown fox jumps over the lAzy dog." |
 | 3   | c<br>"Coding is fun!" | "Coding is fun!" |
-| 4   | d<br>"Don't worry, be happy!" | "Don't worry, be hAppy!" |
+| 4   | a<br>"Don't worry, be happy!" | "Don't worry, be hAppy!" |
 
 ### Note:
 This tests basic string manipulation and character transformation.
@@ -214,9 +214,10 @@ This tests basic string manipulation and character transformation.
 | --- | ----------- | ------------ |
 | 1   | Hong Kong   | gong KonH    |
 | 2   | Antarctica  | antarcticA   |
-| 3   | Hello World | dlroW olleH  |
-| 4   | GitHub Copilot | topiloC buhtiG |
-| 5   | Programming is fun | nuf si gnimmargorP |
+| 3   | Python      | nythoP       |
+| 4   | GitHub      | bithuG       |
+| 5   | Programming | grogramminP  |
+
 
 ### Note:
 This exercise is great for learning about string indexing and manipulation.
