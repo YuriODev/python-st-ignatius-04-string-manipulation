@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise4(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,68 @@ class TestExercise4(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case 1:
+        Description: Check if the function returns False when given inputs
+        'Python' and 'Ruby'.
+        Expected output: False
         """
-        inputs = None
+        inputs = ['Python','Ruby']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "False"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case 2:
+        Description: Check if the function returns True when given inputs
+        'Java' and 'JavaScript'.
+        Expected output: True
         """
-        inputs = None
+        inputs = ['Java', 'JavaScript']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "True"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case 3:
+        Description: Check if the function returns True when given inputs
+        'C++' and 'C#'.
+        Expected output: True
         """
-        inputs = None
+        inputs = ['C++', 'C#']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "True"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case 4:
+        Description: Check if the function returns False when given inputs
+        'HTML' and 'CSS'.
+        Expected output: False
         """
-        inputs = None
+        inputs = ['HTML', 'CSS']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "False"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case 5:
+        Description: Check if the function returns True when given inputs
+        'PHP' and 'Python'.
         """
-        inputs = None
+        inputs = ['PHP', 'Python']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "True"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
