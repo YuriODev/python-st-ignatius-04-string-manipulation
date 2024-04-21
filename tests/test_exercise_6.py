@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise6(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,54 @@ class TestExercise6(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        The string contains only letters.
         """
-        inputs = None
+        inputs = ["abc"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Your message includes letters only."
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        The string contains numbers and letters.
         """
-        inputs = None
+        inputs = ["Street122"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Your message includes numbers and letters."
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        The string contains numbers only.
         """
-        inputs = None
+        inputs = ["23"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Your message includes numbers only."
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        The string contains only letters.
         """
-        inputs = None
+        inputs = ["HelloWorld"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Your message includes letters only."
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        The string contains numbers only.
         """
-        inputs = None
+        inputs = ["12345"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Your message includes numbers only."
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
