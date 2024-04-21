@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise11(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,64 @@ class TestExercise11(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        The program should return 'Watson' for the input 'Holmes & Watson'.
         """
-        inputs = None
+        inputs = ['Holmes & Watson']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'Watson'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        The program should return 'dog.' for the input 'The quick brown fox jumps over the lazy dog.'.
         """
-        inputs = None
+        inputs = ['The quick brown fox jumps over the lazy dog.']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'dog.'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        The program should return 'World' for the input 'Hello World'.
         """
-        inputs = None
+        inputs = ['Hello World']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'World'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        The program should return 'Copilot' for the input 'GitHub Copilot'.
         """
-        inputs = None
+        inputs = ['GitHub Copilot']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'Copilot'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        The program should return 'challenging.' for the input 'Programming is fun and challenging.'.
         """
-        inputs = None
+        inputs = ['Programming is fun and challenging.']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'challenging.'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
+    def test_case_6(self):
+        """
+        The program should return 'Python' for the input 'Python is a programming language.'.
+        """
+        inputs = ['Python.']
+        output = self.run_exercise(inputs)
+        expected_output = 'Python'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
