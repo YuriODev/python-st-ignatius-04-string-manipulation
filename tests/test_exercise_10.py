@@ -22,22 +22,6 @@ class TestExercise10(CustomTestCase):
         The program should not use functions to solve the exercise.
         """
         self.assertNotUseSelfDefinedFunctions()
-# ### Input:
-# - A three-digit integer.
-
-# ### Output:
-# - The sum of the digits.
-
-# ### Examples:
-
-# | No. | Inputs | Outputs |
-# | --- | ------ | ------- |
-# | 1   | 179    | 17      |
-# | 2   | 246    | 12      |
-# | 3   | 503    | 8       |
-# | 4   | 888    | 24      |
-# | 5   | 999    | 27      |
-
 
     def test_case_1(self):
         """
