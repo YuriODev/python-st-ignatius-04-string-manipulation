@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise3(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,64 @@ class TestExercise3(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case 1:
+        Inputs: ["45"]
+        Expected Output: "2452"
         """
-        inputs = None
+        inputs = ["45"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "2452"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case 2:
+        Inputs: ["1"]
+        Expected Output: "212"
         """
-        inputs = None
+        inputs = ["1"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "212"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case 3:
+        Inputs: ["0"]
+        Expected Output: "202"
         """
-        inputs = None
+        inputs = ["0"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "202"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case 4:
+        Inputs: ["999"]
+        Expected Output: "29992"
         """
-        inputs = None
+        inputs = ["999"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "29992"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case 5:
+        Inputs: ["1234"]
+        Expected Output: "212342"
         """
-        inputs = None
+        inputs = ["1234"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "212342"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
