@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise5(CustomTestCase):
 
     def test_list_usage(self):
@@ -22,50 +23,63 @@ class TestExercise5(CustomTestCase):
         """
         self.assertNotUseSelfDefinedFunctions()
 
+    # | No. | Inputs | Outputs |
+    # | --- | ------ | ------- |
+    # | 1   | Lords of the World<br>But who shall dwell in these worlds if they be inhabited? Are we or they Lords of the World? And how are all things made for man? | Yes |
+    # | 2   | Python<br>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible. | No |
+    # | 3   | Hello<br>Hello, World! | Yes |
+    # | 4   | Python<br>Python is a high-level, interpreted, interactive, and object-oriented scripting language. | Yes |
+    # | 5   | Java<br>Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. | Yes |
+
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case 1: Lords of the World
         """
-        inputs = None
+        inputs = ["Lords of the World", "But who shall dwell in these worlds if they be inhabited? Are we or they Lords of the World? And how are all things made for man?"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Yes"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case 2: Python and Java
         """
-        inputs = None
+        inputs = ["Python", "Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible."]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "No"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case 3: Hello and Hello, World!
         """
-        inputs = None
+        inputs = ["Hello", "Hello, World!"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Yes"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case 4: Python
         """
-        inputs = None
+        inputs = ["Python", "Python is a high-level, interpreted, interactive, and object-oriented scripting language."]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Yes"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case 5: Java
         """
-        inputs = None
+        inputs = ["Java", "Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible."]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "Yes"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
