@@ -23,14 +23,6 @@ class TestExercise5(CustomTestCase):
         """
         self.assertNotUseSelfDefinedFunctions()
 
-    # | No. | Inputs | Outputs |
-    # | --- | ------ | ------- |
-    # | 1   | Lords of the World<br>But who shall dwell in these worlds if they be inhabited? Are we or they Lords of the World? And how are all things made for man? | Yes |
-    # | 2   | Python<br>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible. | No |
-    # | 3   | Hello<br>Hello, World! | Yes |
-    # | 4   | Python<br>Python is a high-level, interpreted, interactive, and object-oriented scripting language. | Yes |
-    # | 5   | Java<br>Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. | Yes |
-
     def test_case_1(self):
         """
         Test case 1: Lords of the World
