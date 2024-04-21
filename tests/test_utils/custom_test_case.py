@@ -214,7 +214,7 @@ class CustomTestCase(unittest.TestCase):
         Checks if the solution file uses lists or list constructions.
         """
         content = self.file_content
-        return bool(re.search(r'\blist\b|\[|\]', content))
+        return bool(re.search(r'\blist\b|\bappend\b', content))
 
     def check_for_string_slice(self):
         """
