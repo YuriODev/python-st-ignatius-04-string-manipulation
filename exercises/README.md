@@ -121,9 +121,10 @@ The problem tests the ability to manipulate and compare string characters effect
 | No. | Inputs | Outputs |
 | --- | ------ | ------- |
 | 1   | Lords of the World<br>But who shall dwell in these worlds if they be inhabited? Are we or they Lords of the World? And how are all things made for man? | Yes |
-| 2   | 12345   | Your message includes numbers only.       |
-| 3   | ABCDEF  | Your message includes letters only.       |
-| 4   | Hello123World | Your message includes numbers and letters.|
+| 2   | Python<br>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible. | No |
+| 3   | Hello<br>Hello, World! | Yes |
+| 4   | Python<br>Python is a high-level, interpreted, interactive, and object-oriented scripting language. | Yes |
+| 5   | Java<br>Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. | Yes |
 
 ### Note:
 This problem examines the ability to work with substrings and perform string searches.
