@@ -43,8 +43,6 @@ class TestExercise13(CustomTestCase):
         self.assertInCustom(expected=expected_output, actual=output,
                             input_value=inputs)
 
-    # Add more test cases for the remaining examples
-
     def test_case_3(self):
         """
         The program should return the correct output for Example 3.
