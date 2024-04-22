@@ -332,11 +332,14 @@ This exercise tests string manipulation, focusing on filtering characters.
 ### Output:
 - The string with all extra spaces removed.
 
-### Examples:
+### Examples:                             
 
 | No. | Inputs                                                                                                        | Outputs                                                                                               |
 | --- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 1   |    Beyond the green     swelling hills of the     Mittel Land rose mighty slopes of forest    up    to the lofty steeps of the Carpathians    themselves | Beyond the green swelling hills of the Mittel Land rose mighty slopes of forest up to the lofty steeps of the Carpathians themselves |
+| 2   |    The quick brown fox jumps over the lazy dog     . | The quick brown fox jumps over the lazy dog. |
+| 3   |    Hello , world!      | Hello, world! |
+| 4   |    This is a test      | This is a test |
 
 ### Note:
 The problem tests string trimming and space normalization.
