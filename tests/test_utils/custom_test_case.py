@@ -183,10 +183,43 @@ class CustomTestCase(unittest.TestCase):
 
     def check_for_dictionary(self):
         """
-        Checks if the solution file uses a dictionary.
+        Checks if the solution file uses a dictionary by searching for dictionary literals
+        and ensuring that these aren't confused with f-string usages.
         """
         content = self.file_content
-        return bool(re.search(r'\bdict\b', content)) or bool(re.search(r'\{[^{}]*:[^{}]*\}', content))
+
+        # Regex pattern to detect f-strings
+        f_string_pattern = r"""
+        f['"]         # f followed by a single or double quote
+        .*?           # any characters, non-greedily
+        \{.*?\}       # curly braces containing anything, used for formatting
+        .*?           # any characters, non-greedily
+        ['"]          # closing single or double quote
+        """
+
+        # Regex pattern to detect dictionary usage
+        dictionary_pattern = r"""
+        \{            # Opening brace
+        \s*           # Optional whitespace inside the curly braces
+        [^\s:{}]+     # At least one character that is not a colon, brace, or whitespace (key)
+        \s*:\s*       # Colon with optional surrounding whitespace (key-value separator)
+        [^\s{}]+      # At least one character that is not a brace or whitespace (value)
+        \s*           # Optional whitespace before the closing brace
+        \}            # Closing brace
+        """
+
+        # Find all f-string and dictionary matches
+        f_string_matches = [match.group(0) for match in re.finditer(f_string_pattern, content, re.VERBOSE | re.DOTALL)]
+        dictionary_matches = [match.group(0) for match in re.finditer(dictionary_pattern, content, re.VERBOSE | re.DOTALL)]
+
+        # Exclude any dictionary matches that are substring of f-string matches
+        for f_string in f_string_matches:
+            dictionary_matches = [d for d in dictionary_matches if d not in f_string]
+
+            # If any dictionary matches remain, dictionary usage is confirmed
+            dictionary_used = bool(dictionary_matches)
+
+        return dictionary_used
 
     def check_for_loops(self):
         """
