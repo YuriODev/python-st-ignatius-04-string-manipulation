@@ -524,7 +524,7 @@ Tests string manipulation and palindrome checking.
 
 ## Exercise 23: Convert to Morse Code - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-**Problem:** Write a program that converts a user-entered string into Morse code. Use an online Morse code table for reference.
+**Problem:** Write a program that converts a user-entered string into Morse code. Use an online Morse code table for reference. No restrictions on using dictionaries or lists.
 
 ### Input:
 - A string.
