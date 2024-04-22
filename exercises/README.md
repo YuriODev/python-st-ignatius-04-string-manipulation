@@ -457,7 +457,7 @@ This problem tests string manipulation and accessing specific character position
 
 ## Exercise 20: Sum of Single Digit Numbers - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-**Problem:** Given a string of single-digit numbers without spaces, write a program to compute their sum.
+**Problem:** Given a string of digit-only numbers without spaces, write a program to compute their sum.
 
 ### Input:
 - A string of digits.
