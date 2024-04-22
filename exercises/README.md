@@ -677,11 +677,11 @@ Challenges string processing and word counting without using lists.
 
 | No. | Inputs         | Outputs |
 | --- | -------------- | ------- |
+| 1   | 1<br>abc       | bcd     |
 | 2   | 26<br>abc      | abc     |
 | 3   | 1<br>Python    | Qzuipo  |
-| 4   | IX             | 9       |
-| 5   | LXXVIII        | 78      |
-| 6   | CD             | 400     |
+| 4   | 3<br>Python    | Sbwkrq  |
+
 
 ### Note:
 Tests understanding of character manipulation within strings and conditional wrapping for alphabets.
