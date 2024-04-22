@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise24(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,55 @@ class TestExercise24(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case for the string 'Hello, Guido!'
         """
-        inputs = None
+        inputs = ['Hello, Guido!']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '80.00\n20.00'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case for the string 'This is a Test'
         """
-        inputs = None
+        inputs = ['This is a Test']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '81.82\n18.18'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case for the string 'PYTHON123'
         """
-        inputs = None
+        inputs = ['PYTHON123']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '0.00\n100.00'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case for the string 'AbCdEfG'
         """
-        inputs = None
+        inputs = ['AbCdEfGh']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '50.00\n50.00'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case for the string '1234567890'
         """
-        inputs = None
+        inputs = ['1234567890']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = '0.00\n0.00'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
+    unittest.main()
     unittest.main(testRunner=CustomTestRunner())
