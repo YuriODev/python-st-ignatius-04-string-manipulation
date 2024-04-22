@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise28(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,44 @@ class TestExercise28(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case 1: Do you play any sports? Yes, I like to play basketball.
         """
-        inputs = None
+        inputs = ["Do you play any sports? Yes, I like to play basketball."]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "11"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case 2: How many siblings do you have? I have two sisters and one brother.
         """
-        inputs = None
+        inputs = ["How many siblings do you have? I have two sisters and one brother."]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "13"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case 3: What is your favorite color? My favorite color is blue.
         """
-        inputs = None
+        inputs = ["What is your favorite color? My favorite color is blue."]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "10"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case 4: First character is 'A' and second character is 'Z'
         """
-        inputs = None
+        inputs = ["This is a test"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "4"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
-    def test_case_5(self):
-        """
-        Description of the test case 5
-        """
-        inputs = None
-        output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
