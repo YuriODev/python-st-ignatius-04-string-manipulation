@@ -539,7 +539,7 @@ Tests string manipulation and palindrome checking.
 | 1   | W      | .--                       |
 | 2   | 9      | ----.                     |
 | 3   | ,      | --..--                    |
-| 4   | Python | .--.-.--....----.         |
+| 4   | Python | .--.-.---....----.        |
 | 5   | :)     | ---...-.--.-              |
 
 ### Note:
