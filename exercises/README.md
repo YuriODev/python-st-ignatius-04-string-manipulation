@@ -501,7 +501,7 @@ Tests string manipulation and understanding of date formats.
 
 ## Exercise 22: Check Palindrome - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-**Problem:** Enter a string. Remove all spaces from it and then determine if it is a palindrome.
+**Problem:** Enter a string. Remove all spaces from it and then determine if it is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
 
 ### Input:
 - A string.
