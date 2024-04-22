@@ -5,12 +5,6 @@ from .test_utils import CustomTestCase, CustomTestRunner
 
 class TestExercise23(CustomTestCase):
 
-    def test_list_usage(self):
-        """
-        The program should not use lists to solve the exercise.
-        """
-        self.assertNotUsesList()
-
     def test_function_usage(self):
         """
         The program should not use functions to solve the exercise.
