@@ -212,9 +212,10 @@ class CustomTestCase(unittest.TestCase):
     def check_for_list(self):
         """
         Checks if the solution file uses lists or list constructions.
+        And split method
         """
         content = self.file_content
-        return bool(re.search(r'\blist\b|\bappend\b', content))
+        return bool(re.search(r'\blist\b', content)) or bool(re.search(r'\.split\(', content)) or bool(re.search(r'\.append\(', content))
 
     def check_for_string_slice(self):
         """
