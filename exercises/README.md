@@ -426,7 +426,7 @@ Focuses on splitting strings and counting elements.
 | 3   | 1*9*8  | 72      |
 | 4   | 2*3  | 6       |
 | 5   | 4*5*6*7*8  | 6720      |
-| 6   | 9*9*9*9*9*9*9  | 531441      |
+| 6   | 9*9*9*9*9*9*9  | 4782969      |
 
 
 ### Note:
@@ -434,7 +434,7 @@ Tests arithmetic operations on strings without using direct numeric operations.
 
 ## Exercise 19: First Decimal Digit - Medium 🔥 (Est. Time: 10-15 mins | Points: 20)
 
-**Problem:** Given a positive real number, print the first digit to the right of the decimal point.
+**Problem:** Given a positive real number, print the first digit to the right of the decimal point. Consider the case where the entered number is an integer.
 
 ### Input:
 - A real number.
@@ -449,7 +449,7 @@ Tests arithmetic operations on strings without using direct numeric operations.
 | 1   | 1.79    | 7       |
 | 2   | 100.89  | 8       |
 | 3   | 6.045   | 0       |
-| 4   | 3.14159 | 4       |
+| 4   | 3.14159 | 1       |
 | 5   | 0.5     | 5       |
 
 ### Note:
