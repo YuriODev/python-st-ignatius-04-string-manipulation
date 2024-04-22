@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise27(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,55 @@ class TestExercise27(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case for the run-length encoding with input 'aaaabbbcaa'
         """
-        inputs = None
+        inputs = ['aaaabbbcaa']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'a4b3c1a2'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case for the run-length encoding with input 'abc'
         """
-        inputs = None
+        inputs = ['abc']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'a1b1c1'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case for the run-length encoding with input 'Hello'
         """
-        inputs = None
+        inputs = ['Hello']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'H1e1l2o1'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case for the run-length encoding with input 'abcdabcd'
         """
-        inputs = None
+        inputs = ['abcdabcd']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'a1b1c1d1a1b1c1d1'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case for the run-length encoding with input 'xyzxyzxyz'
         """
-        inputs = None
+        inputs = ['xyzxyzxyz']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'x1y1z1x1y1z1x1y1z1'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
+    unittest.main()
     unittest.main(testRunner=CustomTestRunner())
