@@ -23,27 +23,6 @@ class TestExercise29(CustomTestCase):
         """
         self.assertNotUseSelfDefinedFunctions()
 
-    # ## Exercise 29: Caesar Cipher - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-    # **Problem:** Encrypt a string using the Caesar cipher, shifting letters by a specified number of places in the alphabet.
-
-    # ### Input:
-    # - An integer for the shift amount and a string to encrypt.
-
-    # ### Output:
-    # - The encrypted string.
-
-    # ### Examples:
-
-
-    # | No. | Inputs         | Outputs |
-    # | --- | -------------- | ------- |
-    # | 1   | 1<br>abc       | bcd     |
-    # | 2   | 26<br>abc      | abc     |
-    # | 3   | 1<br>Python    | Qzuipo  |
-    # | 4   | 3<br>Python    | Sbwkrq  |
-    # | 5   | 5<br>Python    | Udtqts  |
-
     def test_case_1(self):
         """
         Test case 1: Encrypting 'abc' with shift amount 1 should result in 'bcd'.
