@@ -208,18 +208,7 @@ class CustomTestCase(unittest.TestCase):
         \}            # Closing brace
         """
 
-        # Find all f-string and dictionary matches
-        f_string_matches = [match.group(0) for match in re.finditer(f_string_pattern, content, re.VERBOSE | re.DOTALL)]
-        dictionary_matches = [match.group(0) for match in re.finditer(dictionary_pattern, content, re.VERBOSE | re.DOTALL)]
-
-        # Exclude any dictionary matches that are substring of f-string matches
-        for f_string in f_string_matches:
-            dictionary_matches = [d for d in dictionary_matches if d not in f_string]
-
-            # If any dictionary matches remain, dictionary usage is confirmed
-            dictionary_used = bool(dictionary_matches)
-
-        return dictionary_used
+        return bool(re.search(dictionary_pattern, content)) and not bool(re.search(f_string_pattern, content))
 
     def check_for_loops(self):
         """
