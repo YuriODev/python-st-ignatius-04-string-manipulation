@@ -2,6 +2,24 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
+def multiplication_table(a, b, c, d):
+    a, b, c, d = int(a), int(b), int(c), int(d)
+    table = ""
+    table += "\t"
+    for i in range(c, d + 1):
+        table += str(i) + "\t"
+    table += "\n"
+
+    for i in range(a, b + 1):
+        table += str(i) + "\t"
+        for j in range(c, d + 1):
+            table += str(i * j) + "\t"
+        table += "\n"
+
+    return table
+
+
 class TestExercise26(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +42,55 @@ class TestExercise26(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case for the multiplication table with inputs ['1', '4', '2', '5']
         """
-        inputs = None
+        inputs = ['1', '4', '2', '5']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = multiplication_table(*inputs)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case for the multiplication table with inputs ['2', '5', '3', '6']
         """
-        inputs = None
+        inputs = ['2', '5', '3', '6']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = multiplication_table(*inputs)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case for the multiplication table with inputs ['0', '3', '1', '4']
         """
-        inputs = None
+        inputs = ['0', '3', '1', '4']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = multiplication_table(*inputs)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case for the multiplication table with inputs ['5', '8', '2', '3']
         """
-        inputs = None
+        inputs = ['5', '8', '2', '3']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = multiplication_table(*inputs)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case for the multiplication table with inputs ['1', '1', '1', '1']
         """
-        inputs = None
+        inputs = ['1', '1', '1', '1']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = multiplication_table(*inputs)
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
+    unittest.main()
     unittest.main(testRunner=CustomTestRunner())
