@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise25(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,55 @@ class TestExercise25(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case for the string 'C:\\Python36\\python.exe'
         """
-        inputs = None
+        inputs = ['C:\\Python36\\python.exe']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'C:\nPython36\npython.exe'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case for the string 'D:\\Documents\\file.txt'
         """
-        inputs = None
+        inputs = ['D:\\Documents\\file.txt']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'D:\nDocuments\nfile.txt'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case for the string 'E:\\Programs\\program.exe'
         """
-        inputs = None
+        inputs = ['E:\\Programs\\program.exe']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'E:\nPrograms\nprogram.exe'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case for the string 'F:\\Files\\document.docx'
         """
-        inputs = None
+        inputs = ['F:\\Files\\document.docx']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'F:\nFiles\ndocument.docx'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case for the string 'G:\\Pictures\\image.jpg'
         """
-        inputs = None
+        inputs = ['G:\\Pictures\\image.jpg']
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = 'G:\nPictures\nimage.jpg'
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
+    unittest.main()
     unittest.main(testRunner=CustomTestRunner())
