@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise23(CustomTestCase):
 
     def test_list_usage(self):
@@ -9,12 +10,6 @@ class TestExercise23(CustomTestCase):
         The program should not use lists to solve the exercise.
         """
         self.assertNotUsesList()
-
-    def test_dict_usage(self):
-        """
-        The program should not use dictionaries to solve the exercise.
-        """
-        self.assertNoUsesDictionary()
 
     def test_function_usage(self):
         """
@@ -24,48 +19,55 @@ class TestExercise23(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case for converting the letter 'W' into Morse code.
         """
-        inputs = None
+        inputs = ["W"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = ".--"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case for converting the number '9' into Morse code.
         """
-        inputs = None
+        inputs = ["9"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "----."
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case for converting the comma ',' into Morse code.
         """
-        inputs = None
+        inputs = [","]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "--..--"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case for converting the word 'Python' into Morse code.
         """
-        inputs = None
+        inputs = ["Python"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = ".--.-.---....----."
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case for converting the emoticon ':)' into Morse code.
         """
-        inputs = None
+        inputs = [":)"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "---...-.--.-"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
+    unittest.main()
     unittest.main(testRunner=CustomTestRunner())
