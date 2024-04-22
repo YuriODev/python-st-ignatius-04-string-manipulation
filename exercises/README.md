@@ -655,9 +655,9 @@ Tests string iteration and conditional counting for encoding patterns.
 
 | No. | Inputs                                                         | Outputs |
 | --- | -------------------------------------------------------------- | ------- |
-| 1   | Do you play any sports? Yes, I like to play basketball.        | 10      |
-| 2   | How many siblings do you have? I have two sisters and one brother. | 9      |
-| 3   | What is your favorite color? My favorite color is blue.        | 7       |
+| 1   | Do you play any sports? Yes, I like to play basketball.        | 11      |
+| 2   | How many siblings do you have? I have two sisters and one brother. | 13      |
+| 3   | What is your favorite color? My favorite color is blue.        | 10       |
 
 ### Note:
 Challenges string processing and word counting without using lists.
