@@ -547,7 +547,7 @@ Focuses on string manipulation and applying encoding schemes.
 
 ## Exercise 24: Letter Case Frequency - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
 
-**Problem:** Write a program to determine the percentage of uppercase and lowercase letters in a string.
+**Problem:** Write a program to determine the percentage of uppercase and lowercase letters in a string. Ignore spaces and punctuation.
 
 ### Input:
 - A string which may contain spaces and punctuation.
@@ -559,11 +559,11 @@ Focuses on string manipulation and applying encoding schemes.
 
 | No. | Inputs        | Outputs     |
 | --- | ------------- | ----------- |
-| 1   | Hello, Guido! | 61.54<br>15.38 |
-| 2   | This is a Test | 57.14<br>28.57 |
-| 3   | PYTHON123     | 0.0<br>100.0 |
-| 4   | AbCdEfG       | 42.86<br>57.14 |
-| 5   | 1234567890    | 0.0<br>0.0 |
+| 1   | Hello, Guido! | 80.00<br>20.00 |
+| 2   | This is a Test | 81.82<br>18.18 |
+| 3   | PYTHON123     | 0.00<br>100.09 |
+| 4   | AbCdEfG       | 50.00<br>50.00 |
+| 5   | 1234567890    | 0.00<br>0.00 |
 
 ### Note:
 This exercise tests string analysis and percentage calculation skills.
