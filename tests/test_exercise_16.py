@@ -2,6 +2,7 @@
 import unittest
 from .test_utils import CustomTestCase, CustomTestRunner
 
+
 class TestExercise16(CustomTestCase):
 
     def test_list_usage(self):
@@ -24,48 +25,55 @@ class TestExercise16(CustomTestCase):
 
     def test_case_1(self):
         """
-        Description of the test case 1
+        Test case 1: First character is 'A' and second character is 'F'
         """
-        inputs = None
+        inputs = ["A", "F"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "ABCDEF"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_2(self):
         """
-        Description of the test case 2
+        Test case 2: First character is '0' and second character is '9'
         """
-        inputs = None
+        inputs = ["0", "9"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "0123456789"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_3(self):
         """
-        Description of the test case 3
+        Test case 3: First character is 'a' and second character is 'z'
         """
-        inputs = None
+        inputs = ["a", "z"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "abcdefghijklmnopqrstuvwxyz"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_4(self):
         """
-        Description of the test case 4
+        Test case 4: First character is 'A' and second character is 'Z'
         """
-        inputs = None
+        inputs = ["A", "Z"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
 
     def test_case_5(self):
         """
-        Description of the test case 5
+        Test case 5: First character is '!' and second character is '@'
         """
-        inputs = None
+        inputs = ["!", "@"]
         output = self.run_exercise(inputs)
-        expected_output = "None"
-        self.assertInCustom(expected=expected_output, actual=output, input_value=inputs)
+        expected_output = "!\"#$%&'()*+,-./0123456789:;<=>?@"
+
+        self.assertInCustom(expected=expected_output, actual=output,
+                            input_value=inputs)
+
 
 if __name__ == '__main__':
     unittest.main(testRunner=CustomTestRunner())
