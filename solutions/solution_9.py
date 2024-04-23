@@ -1,10 +1,16 @@
-# Read the input
-h = int(input())
-m = int(input())
-s = int(input())
+# Prompt the user to enter a string.
+user_input = input("Enter a string: ")
 
-# Calculate the angle
-angle = 0.5 * (60 * h + m + s / 60)
+# Check length of the string
+if len(user_input) == 1:
+    # Output the string as it is
+    output = user_input
+elif len(user_input) == 2:
+    # Swap the two characters
+    output = user_input[::-1]
+else:
+    # Swap the first and last characters of the string
+    output = user_input[-1] + user_input[1:-1] + user_input[0]
 
-# Print the angle
-print(angle)
+# Output the modified string
+print(output)
