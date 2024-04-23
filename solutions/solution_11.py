@@ -1,20 +1,23 @@
-# Read the input
-s = int(input())
+# Prompt the user to enter a string.
+input_string = input("Enter a string: ")
 
-# Calculate the number of bills for each denomination
-bills_500 = s // 500
-s %= 500
+# Count the number of words in the string.
+number_of_words = input_string.count(" ") + 1
 
-bills_100 = s // 100
-s %= 100
+# Find the last word in the string depending on the number of words.
+if number_of_words == 1:
+    last_word = input_string
+else:
+    last_word = ""
+    position = -1
+    space_found = False
 
-bills_10 = s // 10
-s %= 10
+    while not space_found:
+        if input_string[position] == " ":
+            space_found = True
+        else:
+            last_word = input_string[position] + last_word
+            position -= 1
 
-bills_5 = s // 5
-s %= 5
-
-bills_1 = s
-
-# Print the number of bills for each denomination in one line
-print(f"{bills_500} (500), {bills_100} (100), {bills_10} (10), {bills_5} (5), {bills_1} (1)")
+# Output the last word in the string.
+print(last_word)
