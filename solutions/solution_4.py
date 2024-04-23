@@ -1,24 +1,11 @@
-# Read the input
-n = int(input())
+# Prompt the user to enter the first word
+first_word = input("Enter the first word: ")
 
-# Extract the digits
-d1 = n // 1000
-d2 = (n % 1000) // 100
-d3 = (n % 100) // 10
-d4 = n % 10
+# Prompt the user to enter the second word
+second_word = input("Enter the second word: ")
 
-# # SOLUTION 1
+# Check if the first word starts with the same letter the second word does
+output = first_word[0] == second_word[0]
 
-# # Calculate the result
-# result = (d1 == d4) * (d2 == d3)
-
-# # Print the result
-# print(result)
-
-# SOLUTION 2
-
-# Calculate the difference
-difference = abs((d1 - d4) + (d2 - d3))
-
-# Print the result
-print(max(1 - difference, 0))
+# Output the result
+print(output)
