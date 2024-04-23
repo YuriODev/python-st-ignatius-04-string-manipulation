@@ -1,23 +1,3 @@
-# ## Exercise 27: Run-Length Encoding - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-# **Problem:** Encode a string by replacing groups of identical characters with the character followed by its count.
-
-# ### Input:
-# - A string.
-
-# ### Output:
-# - The encoded string.
-
-# ### Examples:
-
-# | No. | Inputs      | Outputs   |
-# | --- | ----------- | --------- |
-# | 1   | aaaabbbcaa  | a4b3c1a2  |
-# | 2   | abc         | a1b1c1    |
-# | 3   | Hello       | H1e1l2o1  |
-# | 4   | abcdabcd    | a1b1c1d1a1b1c1d1 |
-# | 5   | xyzxyzxyz   | x1y1z1x1y1z1x1y1z1 |
-
 # Prompt the user to enter a string
 string = input("Enter a string: ")
 
