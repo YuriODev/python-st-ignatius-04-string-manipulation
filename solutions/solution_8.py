@@ -1,14 +1,11 @@
-# Read the input
-a = int(input())
-b = int(input())
-c = int(input())
+# Prompt the user for a character
+character = input("Enter a character: ")
 
-# Calculate the minimum, middle, and maximum values
-min_value = a * (a <= b and a <= c) + b * (b < a or b < c) + c * (c < a and c < b)
-max_value = a * (a >= b and a >= c) + b * (b > a or b > c) + c * (c > a and c > b)
-mid_value = a + b + c - min_value - max_value
+# Prompt the user for a string
+string = input("Enter a string: ")
 
-# Print the sorted numbers
-print(min_value)
-print(mid_value)
-print(max_value)
+# Change the specified character to uppercase
+output = string.replace(character, character.upper())
+
+# Output the modified string
+print(output)
