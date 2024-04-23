@@ -1,9 +1,12 @@
-# Read the input
-a = int(input())
-b = int(input())
+# Prompt the user to enter a message.
+message = input("Enter a message: ")
 
-# Check if a is divisible by b
-divisible = "YES" * (a % b == 0) or "NO"
-
-# Print the result
-print(divisible)
+# Check if the message contains only letters.
+if message.isalpha():
+    print("Your message includes letters only.")
+# Check if the message contains only digits.
+elif message.isdigit():
+    print("Your message includes numbers only.")
+# Check if the message contains both letters and digits.
+else:
+    print("Your message includes numbers and letters.")
