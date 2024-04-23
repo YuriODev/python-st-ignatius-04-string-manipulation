@@ -1,12 +1,11 @@
-# Read the input
-a = int(input())
-b = int(input())
+# Prompt the user to enter the first string
+first_word = input("Enter the first string: ")
 
-# Calculate the maximum value
-max_value = (a + b + abs(a - b)) // 2
+# Prompt the user to enter the second string
+second_word = input("Enter the second string: ")
 
-# Alternative solution
-max_value = a * (a > b) + b * (b >= a)
+# Check if the first string is a substring of the second string
+output = first_word in second_word
 
-# Print the maximum value
-print(max_value)
+# Output the result
+print("Yes" if output else "No")
