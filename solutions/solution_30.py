@@ -1,23 +1,3 @@
-# ## Exercise 30: Roman to Integer Conversion - Hard 🥵 (Est. Time: 15-20 mins | Points: 30)
-
-# **Problem:** Convert a Roman numeral to an integer.
-
-# ### Input:
-# - A string representing a Roman numeral.
-
-# ### Output:
-# - The integer value of the Roman numeral.
-
-# ### Examples:
-
-# | No. | Inputs   | Outputs |
-# | --- | -------- | ------- |
-# | 1   | MMMCMXCIX | 3999    |
-# | 2   | IV        | 4       |
-# | 3   | XXI       | 21      |
-# | 4   | XLV       | 45      |
-# | 5   | CXXV      | 125     |
-
 # Prompt the user to enter a Roman numeral
 roman_numeral = input("Enter a Roman numeral: ")
 
