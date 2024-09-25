@@ -1,10 +1,10 @@
 # 📘 String Manipulation in Python
 
-![GitHub contributors](https://img.shields.io/github/contributors/YurioDev/python-yuriodev-01-simple-data-types?style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/YurioDev/python-yuriodev-01-simple-data-types?style=for-the-badge)
-![Stars](https://img.shields.io/github/stars/YurioDev/python-yuriodev-01-simple-data-types?style=for-the-badge)
-![Issues](https://img.shields.io/github/issues/YurioDev/python-yuriodev-01-simple-data-types?style=for-the-badge)
-![License](https://img.shields.io/github/license/YurioDev/python-yuriodev-01-simple-data-types?style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/YurioDev/python-yuriodev-04-string-manipulation?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/YurioDev/python-yuriodev-04-string-manipulation?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/YurioDev/python-yuriodev-04-string-manipulation?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/YurioDev/python-yuriodev-04-string-manipulation?style=for-the-badge)
+![License](https://img.shields.io/github/license/YurioDev/python-yuriodev-04-string-manipulation?style=for-the-badge)
 
 Welcome to the fourth module of the **YuriODev Comprehensive Python Course**, focusing on **String Manipulation**. Strings are fundamental in Python programming, and mastering their manipulation is key to handling text data efficiently.
 
