@@ -5,7 +5,7 @@ Here are some examples to get you started.
 <details open>
 <summary><b>Covered topics</b></summary>
 
-| Topic Covered                                           | Code with explanations                            | Problem description | Video explanation |   
+| Topic Covered                                           | Code with explanations                            | Problem description | Video explanation (is coming) |   
 | ------------------------------------------------------- | ------------------------------------------------- | ------------------- | ---------------- |
 | Repeat Last Two Characters                              | [Detailed code](./example_1.py)                   | [Problem description](#example-1-repeat-last-two-characters) | [Video explanation](#) |
 | Reverse Digits                                          | [Detailed code](./example_2.py)                   | [Problem description](#example-2-reverse-digits) | [Video explanation](#) |
