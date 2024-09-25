@@ -5,38 +5,38 @@ Here are some examples to get you started.
 <details open>
 <summary><b>Covered topics</b></summary>
 
-| Topic Covered                                           | Code with explanations                            |
-| ------------------------------------------------------- | ------------------------------------------------- |
-| Repeat Last Two Characters                              | [Detailed code](./example_1.py)                   |
-| Reverse Digits                                          | [Detailed code](./example_2.py)                   |
-| Check Start of String                                   | [Detailed code](./example_3.py)                   |
-| Number reversal                                         | [Detailed code](./example_4.py)                   |
-| Palindrome String                                       | [Detailed code](./example_5.py)                   |
-| Is Digit Check                                          | [Detailed code](./example_6.py)                   |
-| Digits and Characters                                   | [Detailed code](./example_7.py)                   |
-| The first word in a string                              | [Detailed code](./example_8.py)                   |
-| Access Code Calculation                                 | [Detailed code](./example_9.py)                   |
-| ASCII Characters                                        | [Detailed code](./example_10.py)                  |
-| Count Words in a String                                 | [Detailed code](./example_11.py)                  |
-| String Len                                              | [Detailed code](./example_12.py)                  |
-| Digits and Characters Count                             | [Detailed code](./example_13.py)                  |
-| Vowel and Consonant Check                               | [Detailed code](./example_14.py)                  |
-| Sum of Sequence Elements Calculation                    | [Detailed code](./example_15.py)                  |
-| Uppercase, Lowercase, and Space Count                   | [Detailed code](./example_16.py)                  |
-| Remove Duplicate Characters                             | [Detailed code](./example_17.py)                  |
-| Find and Replace Substring                              | [Detailed code](./example_18.py)                  |
-| Longest Sequence of Zeros                               | [Detailed code](./example_19.py)                  |
-| Can Construct                                           | [Detailed code](./example_20.py)                  |
-| Check Bracket Balance                                   | [Detailed code](./example_21.py)                  |
-| Evaluate Expression                                     | [Detailed code](./example_22.py)                  |
-| Count String Occurrences                                | [Detailed code](./example_23py)                   |
-| Format Number with Commas                               | [Detailed code](./example_24.py)                  |
-| Find and Replace Substring                              | [Detailed code](./example_25.py)                  |
-| Find Shortest Word and Its Length                       | [Detailed code](./example_26.py)                  | 
-| Run-Length Encoding                                     | [Detailed code](./example_27.py)                  |
-| Evaluate Simple Arithmetic Expression                   | [Detailed code](./example_28.py)                  |
-| Find Most Frequent Letters                              | [Detailed code](./example_29.py)                  |
-| Validate IP Address                                     | [Detailed code](./example_30.py)                  |
+| Topic Covered                                           | Code with explanations                            | Problem description | Video explanation |   
+| ------------------------------------------------------- | ------------------------------------------------- | ------------------- | ---------------- |
+| Repeat Last Two Characters                              | [Detailed code](./example_1.py)                   | [Problem description](#example-1-repeat-last-two-characters) | [Video explanation](#) |
+| Reverse Digits                                          | [Detailed code](./example_2.py)                   | [Problem description](#example-2-reverse-digits) | [Video explanation](#) |
+| Check Start of String                                   | [Detailed code](./example_3.py)                   | [Problem description](#example-3-check-start-of-string) | [Video explanation](#) |
+| Number reversal                                         | [Detailed code](./example_4.py)                   | [Problem description](#example-4-number-reversal) | [Video explanation](#) |
+| Palindrome String                                       | [Detailed code](./example_5.py)                   | [Problem description](#example-5-palindrome-string) | [Video explanation](#) |
+| Is Digit Check                                          | [Detailed code](./example_6.py)                   | [Problem description](#example-6-is-digit-check) | [Video explanation](#) |
+| Digits and Characters                                   | [Detailed code](./example_7.py)                   | [Problem description](#example-7-digits-and-characters) | [Video explanation](#) |
+| The first word in a string                              | [Detailed code](./example_8.py)                   | [Problem description](#example-8-the-first-word-in-a-string) | [Video explanation](#) |
+| Access Code Calculation                                 | [Detailed code](./example_9.py)                   | [Problem description](#example-9-access-code-calculation) | [Video explanation](#) |
+| ASCII Characters                                        | [Detailed code](./example_10.py)                  | [Problem description](#example-10-ascii-characters) | [Video explanation](#) |
+| Count Words in a String                                 | [Detailed code](./example_11.py)                  | [Problem description](#example-11-count-words-in-a-string) | [Video explanation](#) |
+| String Len                                              | [Detailed code](./example_12.py)                  | [Problem description](#example-12-string-len) | [Video explanation](#) |
+| Digits and Characters Count                             | [Detailed code](./example_13.py)                  | [Problem description](#example-13-digits-and-characters-count) | [Video explanation](#) |
+| Vowel and Consonant Check                               | [Detailed code](./example_14.py)                  | [Problem description](#example-14-vowel-and-consonant-check) | [Video explanation](#) |
+| Sum of Sequence Elements Calculation                    | [Detailed code](./example_15.py)                  | [Problem description](#example-15-sum-of-sequence-elements-calculation) | [Video explanation](#) |
+| Uppercase, Lowercase, and Space Count                   | [Detailed code](./example_16.py)                  | [Problem description](#example-16-uppercase-lowercase-and-space-count) | [Video explanation](#) |
+| Remove Duplicate Characters                             | [Detailed code](./example_17.py)                  | [Problem description](#example-17-remove-duplicate-characters) | [Video explanation](#) |
+| Find and Replace Substring                              | [Detailed code](./example_18.py)                  | [Problem description](#example-18-find-and-replace-substring) | [Video explanation](#) |
+| Longest Sequence of Zeros                               | [Detailed code](./example_19.py)                  | [Problem description](#example-19-longest-sequence-of-zeros) | [Video explanation](#) |
+| Can Construct                                           | [Detailed code](./example_20.py)                  | [Problem description](#example-20-can-construct) | [Video explanation](#) |
+| Check Bracket Balance                                   | [Detailed code](./example_21.py)                  | [Problem description](#example-21-check-bracket-balance) | [Video explanation](#) |
+| Evaluate Expression                                     | [Detailed code](./example_22.py)                  | [Problem description](#example-22-evaluate-expression) | [Video explanation](#) |
+| Count String Occurrences                                | [Detailed code](./example_23.py)                  | [Problem description](#example-23-count-string-occurrences) | [Video explanation](#) |
+| Format Number with Commas                               | [Detailed code](./example_24.py)                  | [Problem description](#example-24-format-number-with-commas) | [Video explanation](#) |
+| Find and Replace Substring                              | [Detailed code](./example_25.py)                  | [Problem description](#example-25-find-and-replace-substring) | [Video explanation](#) |
+| Find Shortest Word and Its Length                       | [Detailed code](./example_26.py)                  | [Problem description](#example-26-find-shortest-word-and-its-length) | [Video explanation](#) |
+| Run-Length Encoding                                     | [Detailed code](./example_27.py)                  | [Problem description](#example-27-run-length-encoding) | [Video explanation](#) |
+| Evaluate Simple Arithmetic Expression                   | [Detailed code](./example_28.py)                  | [Problem description](#example-28-evaluate-simple-arithmetic-expression) | [Video explanation](#) |
+| Find Most Frequent Letters                              | [Detailed code](./example_29.py)                  | [Problem description](#example-29-find-most-frequent-letters) | [Video explanation](#) |
+| Validate IP Address                                     | [Detailed code](./example_30.py)                  | [Problem description](#example-30-validate-ip-address) | [Video explanation](#) |
 
 </details>
 
@@ -123,7 +123,7 @@ print(starts_with_prefix)
 
 
 
-## Example 4:  Number reversal
+## Example 4: Number reversal
 
 **Problem:** Given a natural number `n`. Find a number obtained by permuting its first and last digits. Consider the case of entering a single-digit number.
 
@@ -310,7 +310,7 @@ print(result)
 </details>
 
 
-## Example 10:  ASCII Characters
+## Example 10: ASCII Characters
 
 **Problem:** Print all ASCII characters with codes from `n` (n > 32) to `m` (m < 127) and their codes in the following format: "character code".
 
